@@ -1,0 +1,47 @@
+.locationWrapper {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.greyText {
+  color: #6c717b;
+  text-align: start;
+  line-height: 24px;
+}
+
+.inputLocation {
+  display: flex;
+  width: 360px;
+  height: 56px;
+  padding: 18px 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 8px;
+  gap: 10px;
+  border-radius: 12px;
+  border: transparent;
+  background: #f7f7f7;
+}
+
+.inputFocus:focus-visible {
+  outline: none;
+}
+
+.locationIcon {
+  position: absolute;
+  top: 26px;
+  left: 20px;
+}
+
+.inputLocation:focus + .locationIcon {
+  fill: transparent;
+  stroke: #101828;
+}
+
+.generalText {
+  color: #475467;
+  font-weight: 500;
+}

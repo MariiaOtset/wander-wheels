@@ -12,3 +12,8 @@
   background: #e44848;
   color: #fff;
 }
+
+.button:hover,
+.button:focus {
+  background: #d84343;
+}
