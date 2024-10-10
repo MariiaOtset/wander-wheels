@@ -1,14 +1,25 @@
-// import { useState } from "react";
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header/Header";
 import "./App.css";
-import HomePage from "./pages/HomePage/HomePage.jsx";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
+const CamperDetailsPage = lazy(() =>
+  import("./pages/CamperDetailsPage/CamperDetailsPage")
+);
 
 function App() {
   return (
     <>
-      <div>
-        <h1>Hiiiiiiii</h1>
-        <HomePage />
-      </div>
+      <Suspense fallback={null}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<CamperDetailsPage />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

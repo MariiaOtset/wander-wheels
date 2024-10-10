@@ -1,13 +1,14 @@
 .button {
-  display: block;
-  width: 189px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 16px 60px;
-  /* justify-content: center;
-  align-items: center; */
   margin-top: 40px;
+  width: fit-content;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
   border-radius: 200px;
-  color: var(--White, #fff);
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  background: var(--Button, #e44848);
+  background: #e44848;
+  color: #fff;
 }
