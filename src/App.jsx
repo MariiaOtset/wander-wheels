@@ -12,8 +12,8 @@ const CamperDetailsPage = lazy(() =>
 function App() {
   return (
     <>
+      <Header />
       <Suspense fallback={null}>
-        <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
