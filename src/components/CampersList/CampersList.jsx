@@ -11,7 +11,7 @@ const CampersList = () => {
       {campers.map((camper) => {
         return (
           <li key={camper} className={css.camperItem}>
-            <CampersItem camper={camper} />
+            {<CampersItem camper={camper} />}
           </li>
         );
       })}

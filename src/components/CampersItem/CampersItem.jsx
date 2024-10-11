@@ -5,7 +5,7 @@ import css from "./CampersItem.module.css";
 const CampersItem = ({ camper }) => {
   return (
     <>
-      <img src={camper} alt="" />
+      <img src={camper.gallery[0].original} alt={camper.name} className={css.image} />
       <div className={css.camperInfo}>
         <div>
           <h2></h2>

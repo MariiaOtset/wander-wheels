@@ -24,16 +24,16 @@ const campersSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchCampers.pending, handlePending)
-      .addCase(fetchCampers.fulfilled, (state, action) => {
+      .addCase(fetchCampers.fulfilled, (state, { payload }) => {
         state.loading = false;
-        state.items = action.payload.items;
+        state.items = payload.items;
       })
       .addCase(fetchCampers.rejected, handleRejected)
 
       .addCase(fetchCamperById.pending, handlePending)
-      .addCase(fetchCamperById.fulfilled, (state, action) => {
+      .addCase(fetchCamperById.fulfilled, (state, { payload }) => {
         state.loading = false;
-        state.camperById = action.payload;
+        state.camperById = payload;
       })
       .addCase(fetchCamperById.rejected, handleRejected);
   },
