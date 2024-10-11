@@ -1,0 +1,11 @@
+.camperItem {
+  display: flex;
+  padding: 24px;
+  margin-bottom: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  border-radius: 20px;
+  border: 1px solid #dadde1;
+  background: #fff;
+}
