@@ -9,11 +9,18 @@ const SearchForm = () => {
   const vehicleEquipment = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
   const vehicleType = ["Van", "Fully Integrated", "Alcove"];
 
+  const initialValues = {
+    vehicleEquipment: [],
+    vehicleType: "",
+  };
+
   const handleChange = (e) => {
     setValue(e.target.value);
   };
+
+  const handleSubmit = () => {};
   return (
-    <Formik>
+    <Formik initialValues={initialValues} obSubmit={handleSubmit}>
       <Form>
         {/* Location */}
         <label htmlFor="location" className={css.greyText}>
@@ -45,7 +52,13 @@ const SearchForm = () => {
           <div className={css.vehicleOptions}>
             {vehicleEquipment.map((option) => (
               <div key={option}>
-                <Field type="checkbox" className={css.options}></Field>
+                <Field
+                  type="checkbox"
+                  className={css.options}
+                  id={option}
+                  value={option}
+                  name="vehicleEquipment"
+                ></Field>
                 <label htmlFor={option} className={css.optionLabel}>
                   <svg width="32" height="32">
                     <use
@@ -54,6 +67,7 @@ const SearchForm = () => {
                         .replaceAll(" ", "")}`}
                     ></use>
                   </svg>
+                  <span className={css.optionsGap}>{option}</span>
                 </label>
               </div>
             ))}
@@ -67,7 +81,13 @@ const SearchForm = () => {
           <div className={css.vehicleOptions}>
             {vehicleType.map((option) => (
               <div key={option}>
-                <Field type="radio" className={css.options}></Field>
+                <Field
+                  type="radio"
+                  className={css.options}
+                  id={option}
+                  value={option}
+                  name="vehicleType"
+                ></Field>
                 <label htmlFor={option} className={css.optionLabel}>
                   <svg width="32" height="32">
                     <use
@@ -76,6 +96,7 @@ const SearchForm = () => {
                         .replaceAll(" ", "")}`}
                     ></use>
                   </svg>
+                  <span className={css.optionsGap}>{option}</span>
                 </label>
               </div>
             ))}
