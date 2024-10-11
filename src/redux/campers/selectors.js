@@ -1,3 +1,4 @@
-export const selectCampers = (store) => store.campers.item;
-// export const selectFilters = (store) => store.campers.
-// export const selectChosen = (store) => store.campers.
+export const selectCampers = (store) => store.campers.items;
+export const selectCamperById = (store) => store.campers.camperById;
+export const selectLoading = (store) => store.campers.loading;
+export const selectError = (store) => store.campers.error;
