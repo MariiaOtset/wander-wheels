@@ -7,9 +7,11 @@ const Header = () => {
   const linkStyles = ({ isActive }) => clsx(css.link, isActive && css.active);
   return (
     <div className={css.wrapper}>
-      <svg width="136" height="16">
+      <a href="/">
+        <svg width="136" height="16">
         <use href={`${sprite}#icon-Logo`} />
       </svg>
+      </a>
       <nav className={css.navigation}>
         <NavLink to="/" className={linkStyles}>
           Home
