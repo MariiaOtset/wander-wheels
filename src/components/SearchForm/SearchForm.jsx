@@ -5,6 +5,10 @@ import { useState } from "react";
 
 const SearchForm = () => {
   const [value, setValue] = useState("");
+
+  const vehicleEquipment = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
+  const vehicleType = ["Van", "Fully Integrated", "Alcove"];
+
   const handleChange = (e) => {
     setValue(e.target.value);
   };
@@ -33,8 +37,50 @@ const SearchForm = () => {
           </svg>
         </div>
 
-        {/* Filters */}
-        <div></div>
+        {/* Vehicle equipment filters */}
+        <p className={css.generalText}>Filters</p>
+        <div>
+          <h3 className={css.vehicleTitle}>Vehicle equipment</h3>
+          <span className={css.bottomLine}></span>
+          <div className={css.vehicleOptions}>
+            {vehicleEquipment.map((option) => (
+              <div key={option}>
+                <Field type="checkbox" className={css.options}></Field>
+                <label htmlFor={option} className={css.optionLabel}>
+                  <svg width="32" height="32">
+                    <use
+                      href={`${sprite}#icon-${option
+                        .toLowerCase()
+                        .replaceAll(" ", "")}`}
+                    ></use>
+                  </svg>
+                </label>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Vehicle type filters */}
+        <div>
+          <h3 className={css.vehicleTitle}>Vehicle type</h3>
+          <span className={css.bottomLine}></span>
+          <div className={css.vehicleOptions}>
+            {vehicleType.map((option) => (
+              <div key={option}>
+                <Field type="radio" className={css.options}></Field>
+                <label htmlFor={option} className={css.optionLabel}>
+                  <svg width="32" height="32">
+                    <use
+                      href={`${sprite}#icon-${option
+                        .toLowerCase()
+                        .replaceAll(" ", "")}`}
+                    ></use>
+                  </svg>
+                </label>
+              </div>
+            ))}
+          </div>
+        </div>
       </Form>
     </Formik>
   );
