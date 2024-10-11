@@ -9,7 +9,10 @@ const CampersReviewsAndLocation = ({ camper }) => {
           <use href={`${sprite}#icon-star`}></use>
         </svg>
         <p className={css.reviewText}>
-          {camper.rating}({camper.reviews.length} Reviews)
+          <span>{camper.rating}</span>
+          <span
+            className={css.reviewCount}
+          >{`(${camper.reviews.length} Reviews)`}</span>
         </p>
       </div>
       <div>

@@ -16,6 +16,10 @@
   line-height: 1.5;
 }
 
+.reviewCount {
+    margin-left: 1px;
+  }
+
 .iconMap,
 .iconStar {
   margin-right: 4px;
