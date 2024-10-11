@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+}
+
+.reviewWrapper,
+.span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.reviewText,
+.span {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.iconMap,
+.iconStar {
+  margin-right: 4px;
+}

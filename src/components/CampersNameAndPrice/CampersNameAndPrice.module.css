@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  color: #101828;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiddenInput {
+  position: absolute;
+  margin: 10px;
+  visibility: hidden;
+}
+
+.label {
+  cursor: pointer;
+  height: 26px;
+}
+
+.icon {
+  fill: #101828;
+}
+
+.hiddenInput:checked + .icon {
+  fill: transparent;
+  stroke: #e44848;
+}
