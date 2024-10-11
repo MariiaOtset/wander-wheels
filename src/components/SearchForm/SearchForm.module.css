@@ -34,11 +34,12 @@
   position: absolute;
   top: 26px;
   left: 20px;
+  fill: #6c717b;
 }
 
-.inputLocation:focus + .locationIcon {
-  fill: transparent;
-  stroke: #101828;
+.inputLocation:focus + .locationIcon,
+.filled {
+  fill: #101828;
 }
 
 .generalText {

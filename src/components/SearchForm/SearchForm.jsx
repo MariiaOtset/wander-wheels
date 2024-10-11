@@ -25,7 +25,7 @@ const SearchForm = () => {
             placeholder="City"
           />
           <svg
-            className={`${css.locationIcon} ${value ? "filled" : ""}`}
+            className={`${css.locationIcon} ${value ? css.filled : ""}`}
             width="20"
             height="20"
           >
