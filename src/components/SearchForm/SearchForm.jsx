@@ -2,6 +2,7 @@ import css from "./SearchForm.module.css";
 import { Formik, Form, Field } from "formik";
 import sprite from "../../images/sprite.svg";
 import { useState } from "react";
+import Button from "../Button/Button.jsx";
 
 const SearchForm = () => {
   const [value, setValue] = useState("");
@@ -102,6 +103,7 @@ const SearchForm = () => {
             ))}
           </div>
         </div>
+        <Button text="Search" />
       </Form>
     </Formik>
   );

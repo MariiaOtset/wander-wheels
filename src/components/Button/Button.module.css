@@ -9,6 +9,7 @@
   line-height: 24px;
   letter-spacing: -0.08px;
   border-radius: 200px;
+  border: transparent;
   background: #e44848;
   color: #fff;
 }
@@ -16,4 +17,5 @@
 .button:hover,
 .button:focus {
   background: #d84343;
+  outline: none;
 }

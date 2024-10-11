@@ -72,27 +72,38 @@
 .options {
   position: absolute;
   display: flex;
-  /* padding: 16px 40px;  */
   align-items: center;
   mix-blend-mode: multiply;
+  margin: 41px 50px;
+  visibility: hidden;
 }
 
 .optionLabel {
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* padding: 16px 40px; */
   width: 112px;
   height: 96px;
   border-radius: 12px;
   border: 1px solid #dadde1;
   mix-blend-mode: multiply;
   text-align: center;
+  cursor: pointer;
+}
+
+.options:checked + .optionLabel {
+  outline: none;
+  border: 1px solid #e44848;
 }
 
 .optionsGap {
   margin-top: 8px;
 }
-/* border: 1px solid #e44848; hover */
+
+.optionsGap:nth-child(2) {
+  /* word-break: break-all;
+   */
+  padding: 0 16px;
+}
