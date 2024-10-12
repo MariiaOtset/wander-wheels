@@ -12,9 +12,9 @@ const CampersItem = ({ camper }) => {
         className={css.image}
       />
       <div className={css.camperInfo}>
-        <CampersNameAndPrice camper={camper}/>
+        <CampersNameAndPrice camper={camper} />
         <CampersReviewsAndLocation camper={camper} />
-       <p></p> {/* continue here */}
+        <p>{camper.description}</p> {/* continue here */}
         <Button text="d" linkTo="/" target="_blank"></Button>
       </div>
     </>
