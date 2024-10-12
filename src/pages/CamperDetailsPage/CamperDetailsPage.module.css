@@ -1,0 +1,10 @@
+.page {
+  display: flex;
+  padding: 48px 64px 80px;
+  flex-direction: column;
+}
+
+.title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
