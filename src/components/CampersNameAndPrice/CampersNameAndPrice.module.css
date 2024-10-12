@@ -10,6 +10,8 @@
   font-weight: 600;
   line-height: 1.33;
   color: #101828;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .priceWrapper {

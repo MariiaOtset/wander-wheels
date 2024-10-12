@@ -17,22 +17,16 @@ import sprite from "../../images/sprite.svg";
 const BadgesItem = ({ badge }) => {
   const iconName = badge.toLowerCase();
   const iconExists = `${sprite}#icon-${iconName}`;
-
   return (
     <div className={css.itemWrapper}>
-      {iconExists ? (
-        <div className={css.wrapp}>
+      <div className={css.wrap}>
+        {iconExists && (
           <svg className={css.badgeIcon}>
             <use href={`${sprite}#icon-${iconName}`}></use>
           </svg>
-          <p>{badge}</p>
-        </div>
-      ) : (
-        <div className={css.withoutIcon}>
-          <svg className={css.hidden}></svg>
-          <p className={css.textOnly}>{badge}</p>
-        </div>
-      )}
+        )}
+        <p>{badge}</p>
+      </div>
     </div>
   );
 };

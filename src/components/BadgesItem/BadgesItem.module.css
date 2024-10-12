@@ -9,28 +9,14 @@
   mix-blend-mode: multiply;
 }
 
-.wrapp {
+.wrap {
   display: flex;
-  /* justify-content: ; */
+  justify-content: center;
   align-items: center;
+  gap: 8px;
 }
 
 .badgeIcon {
   width: 20px;
   height: 20px;
-}
-
-.withoutIcon {
-  position: relative;
-}
-
-.hidden {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
-.textOnly {
-  position: absolute;
-  left: 20px;
 }

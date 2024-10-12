@@ -7,6 +7,7 @@
 
 .camperInfo {
   width: 524px;
+  height: 320px;
 }
 
 .description {
@@ -17,4 +18,8 @@
   color: #475467;
   text-overflow: ellipsis;
   line-height: 1.5;
+}
+
+.showBtn {
+  margin: 0;
 }
