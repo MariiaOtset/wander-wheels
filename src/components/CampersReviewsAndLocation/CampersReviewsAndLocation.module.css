@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  align-items: center;
 }
 
 .reviewWrapper,
@@ -10,6 +11,10 @@
   margin-right: 16px;
 }
 
+.reviewText {
+  text-decoration-line: underline;
+}
+
 .reviewText,
 .span {
   margin: 0;
@@ -17,8 +22,8 @@
 }
 
 .reviewCount {
-    margin-left: 1px;
-  }
+  margin-left: 1px;
+}
 
 .iconMap,
 .iconStar {

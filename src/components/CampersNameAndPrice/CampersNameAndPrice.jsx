@@ -13,6 +13,7 @@ const CampersNameAndPrice = ({ camper }) => {
             id={camper.id}
             name="favorite"
             className={css.hiddenInput}
+            value={camper}
           />
           <label htmlFor="favorite" className={css.label}>
             <svg className={css.icon} width="26" height="24">
