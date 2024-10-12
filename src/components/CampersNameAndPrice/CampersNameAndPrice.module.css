@@ -26,7 +26,8 @@
 
 .hiddenInput {
   position: absolute;
-  margin: 10px;
+  width: 20px;
+  height: 20px;
   visibility: hidden;
 }
 
@@ -35,11 +36,13 @@
   height: 26px;
 }
 
-.icon {
+/* .icon {
   fill: #101828;
-}
+  stroke: #101828;
+} */
 
 .hiddenInput:checked + .icon {
-  fill: transparent;
-  stroke: #e44848;
+  /* fill: transparent;
+  stroke: #e44848; */
+  fill: #e44848;
 }

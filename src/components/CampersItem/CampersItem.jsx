@@ -1,3 +1,4 @@
+import BadgesList from "../BadgesList/BadgesList.jsx";
 import Button from "../Button/Button.jsx";
 import CampersNameAndPrice from "../CampersNameAndPrice/CampersNameAndPrice.jsx";
 import CampersReviewsAndLocation from "../CampersReviewsAndLocation/CampersReviewsAndLocation.jsx";
@@ -14,8 +15,8 @@ const CampersItem = ({ camper }) => {
       <div className={css.camperInfo}>
         <CampersNameAndPrice camper={camper} />
         <CampersReviewsAndLocation camper={camper} />
-        <p className={css.description}>{camper.description}</p>{" "}
-        {/* continue here */}
+        <p className={css.description}>{camper.description}</p>
+        <BadgesList camper={camper} />
         <Button text="d" linkTo="/" target="_blank"></Button>
       </div>
     </>
