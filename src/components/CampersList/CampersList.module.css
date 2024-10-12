@@ -9,3 +9,7 @@
   border: 1px solid #dadde1;
   background: #fff;
 }
+
+.list {
+  padding-inline-start: 0;
+}

@@ -14,7 +14,8 @@ const CampersItem = ({ camper }) => {
       <div className={css.camperInfo}>
         <CampersNameAndPrice camper={camper} />
         <CampersReviewsAndLocation camper={camper} />
-        <p>{camper.description}</p> {/* continue here */}
+        <p className={css.description}>{camper.description}</p>{" "}
+        {/* continue here */}
         <Button text="d" linkTo="/" target="_blank"></Button>
       </div>
     </>
