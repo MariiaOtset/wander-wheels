@@ -1,0 +1,36 @@
+.itemWrapper {
+  display: flex;
+  padding: 12px 18px;
+  align-items: center;
+  height: 48px;
+  gap: 8px;
+  border-radius: 100px;
+  background: #f2f4f7;
+  mix-blend-mode: multiply;
+}
+
+.wrapp {
+  display: flex;
+  /* justify-content: ; */
+  align-items: center;
+}
+
+.badgeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.withoutIcon {
+  position: relative;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.textOnly {
+  position: absolute;
+  left: 20px;
+}
