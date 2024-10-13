@@ -8,6 +8,8 @@ import { fetchCamperById } from "../../redux/campers/operations.js";
 import Gallery from "../../components/Gallery/Gallery.jsx";
 import ReservationForm from "../../components/ReservationForm/ReservationForm.jsx";
 import ToggleSection from "../../components/ToggleSection/ToggleSection.jsx";
+import ReviewsSection from "../../components/ReviewsSection/ReviewsSection.jsx";
+import FeaturesSection from "../../components/FeaturesSection/FeaturesSection.jsx";
 
 const CamperDetailsPage = () => {
   const { id } = useParams();
@@ -36,8 +38,12 @@ const CamperDetailsPage = () => {
       </h2>
       <Gallery camper={selectedCamper} />
       <p className={css.description}>{selectedCamper.description}</p>
-          <ToggleSection isFeaturesShown={isFeaturesShown} setIsFeaturesShown={setIsFeaturesShown} />
-      <div className={css.sectionWrapper}>
+      <ToggleSection
+        isFeaturesShown={isFeaturesShown}
+        setIsFeaturesShown={setIsFeaturesShown}
+      />
+      <div className={css.sectionsWrapper}>
+        {isFeaturesShown ? <FeaturesSection /> : <ReviewsSection />}
         <ReservationForm />
       </div>
     </div>

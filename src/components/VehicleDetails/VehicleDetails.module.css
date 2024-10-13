@@ -1,0 +1,13 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.info {
+  text-transform: capitalize;
+}
+
+.details:last-child {
+  margin-bottom: 0;
+}

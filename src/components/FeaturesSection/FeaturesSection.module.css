@@ -1,0 +1,17 @@
+.sectionWrapper {
+  display: flex;
+  width: 631px;
+  margin-top: 44px;
+  padding: 44px 54px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 76px;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+
+.titleUnderline {
+  border-bottom: solid 1px #dadde1;
+  padding-bottom: 24px;
+  margin: 0 0 24px 0;
+}

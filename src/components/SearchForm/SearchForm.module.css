@@ -27,9 +27,6 @@
   background: #f7f7f7;
 }
 
-.inputFocus:focus-visible {
-}
-
 .locationIcon {
   position: absolute;
   top: 26px;
@@ -50,9 +47,6 @@
 .vehicleTitle {
   margin: 32px 0 24px;
   color: #101828;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.2;
 }
 
 .bottomLine {

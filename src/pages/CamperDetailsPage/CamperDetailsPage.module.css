@@ -17,6 +17,7 @@
   line-height: 1.5;
 }
 
-.sectionWrapper {
+.sectionsWrapper {
   display: flex;
+  gap: 40px;
 }
