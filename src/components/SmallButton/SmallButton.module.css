@@ -12,11 +12,9 @@
   border: transparent;
   background: #e44848;
   color: #fff;
-  cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
   background: #d84343;
-  outline: none;
 }

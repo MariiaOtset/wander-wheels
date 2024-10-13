@@ -1,16 +1,19 @@
 .wrapper {
-  display: flex;
-  gap: 40px;
   border-bottom: 1px solid #dadde1;
   margin-top: 60px;
 }
 
 .btn {
+  display: inline-block;
+  margin-right: 40px;
+ padding-bottom: 24px; 
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
   border: none;
   background: transparent;
-  padding-inline: 0;
-  padding-bottom: 24px;
+}
+
+.active {
+  border-bottom: solid 5px #e44848;
 }

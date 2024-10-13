@@ -28,7 +28,6 @@
 }
 
 .inputFocus:focus-visible {
-  outline: none;
 }
 
 .locationIcon {
@@ -93,7 +92,6 @@
 }
 
 .options:checked + .optionLabel {
-  outline: none;
   border: 1px solid #e44848;
 }
 
@@ -102,7 +100,5 @@
 }
 
 .optionsGap:nth-child(2) {
-  /* word-break: break-all;
-   */
   padding: 0 16px;
 }

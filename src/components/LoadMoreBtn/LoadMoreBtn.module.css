@@ -13,11 +13,9 @@
   background: #fff;
   border-radius: 200px;
   border: 1px solid #dadde1;
-  outline: none;
 }
 
 .button:hover,
 .button:focus {
   border: 1px solid #d84343;
-  outline: none;
 }
