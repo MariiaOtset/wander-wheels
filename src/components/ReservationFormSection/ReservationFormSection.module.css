@@ -1,0 +1,15 @@
+.sectionWrapper {
+  width: 641px;
+  padding: 44px;
+  border-radius: 10px;
+  border: 1px solid #dadde1;
+}
+
+.title {
+  margin: 0 0 8px 0;
+}
+
+.text {
+  color: #6c717b;
+  margin-bottom: 24px;
+}

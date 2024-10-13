@@ -1,0 +1,9 @@
+.reviewItem {
+  width: 631px;
+  margin-bottom: 44px;
+  margin-top: 12px;
+}
+
+.reviewItem:last-child {
+  margin-bottom: 0;
+}

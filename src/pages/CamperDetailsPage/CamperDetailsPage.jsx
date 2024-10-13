@@ -6,10 +6,10 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchCamperById } from "../../redux/campers/operations.js";
 import Gallery from "../../components/Gallery/Gallery.jsx";
-import ReservationForm from "../../components/ReservationForm/ReservationForm.jsx";
 import ToggleSection from "../../components/ToggleSection/ToggleSection.jsx";
 import ReviewsSection from "../../components/ReviewsSection/ReviewsSection.jsx";
 import FeaturesSection from "../../components/FeaturesSection/FeaturesSection.jsx";
+import ReservationFormSection from "../../components/ReservationFormSection/ReservationFormSection.jsx";
 
 const CamperDetailsPage = () => {
   const { id } = useParams();
@@ -44,7 +44,7 @@ const CamperDetailsPage = () => {
       />
       <div className={css.sectionsWrapper}>
         {isFeaturesShown ? <FeaturesSection /> : <ReviewsSection />}
-        <ReservationForm />
+        <ReservationFormSection />
       </div>
     </div>
   );

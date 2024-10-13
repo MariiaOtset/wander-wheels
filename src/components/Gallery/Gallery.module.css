@@ -2,8 +2,6 @@
   display: flex;
   gap: 48px;
   margin: 28px 0;
-  padding-inline-start: 0;
-  list-style-type: none;
 }
 
 .galleryItem {
