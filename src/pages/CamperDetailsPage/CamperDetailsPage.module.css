@@ -5,6 +5,18 @@
 }
 
 .title {
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-bottom: 8px;
+}
+
+.price {
+  margin: 16px 0 0 0;
+}
+
+.description {
+  color: #475467;
+  line-height: 1.5;
+}
+
+.sectionWrapper {
+  display: flex;
 }

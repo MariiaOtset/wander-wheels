@@ -1,12 +1,19 @@
-// import css from './Gallery.module.css';
+import css from "./Gallery.module.css";
+import { nanoid } from "nanoid";
 
 const Gallery = ({ camper }) => {
   return (
-    <ul>
+    <ul className={css.galleryWrapper}>
       {camper.gallery.map((image) => {
-        <li>
-          <img src={image}></img>
-        </li>;
+        return (
+          <li key={nanoid()} className={css.galleryItem}>
+            <img
+              src={image.original}
+              alt="Picture of the camper"
+              className={css.image}
+            ></img>
+          </li>
+        );
       })}
     </ul>
   );

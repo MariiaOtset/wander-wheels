@@ -5,11 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { fetchCamperById } from "../../redux/campers/operations.js";
+import Gallery from "../../components/Gallery/Gallery.jsx";
+import ReservationForm from "../../components/ReservationForm/ReservationForm.jsx";
+import ToggleSection from "../../components/ToggleSection/ToggleSection.jsx";
 
 const CamperDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  console.log(id);
 
   useEffect(() => {
     async function name() {
@@ -20,8 +22,6 @@ const CamperDetailsPage = () => {
 
   const selectedCamper = useSelector(selectCamper);
 
-  console.log(selectedCamper);
-
   if (!selectedCamper) {
     return <div>Loading...</div>;
   }
@@ -30,7 +30,15 @@ const CamperDetailsPage = () => {
     <div className={css.page}>
       <h2 className={css.title}>{selectedCamper.name}</h2>
       <CampersReviewsAndLocation camper={selectedCamper} />
-      <h2 className={css.title}></h2>
+      <h2 className={`${css.title} ${css.price}`}>
+        €{selectedCamper.price}.00
+      </h2>
+      <Gallery camper={selectedCamper} />
+      <p className={css.description}>{selectedCamper.description}</p>
+      <ToggleSection />
+      <div className={css.sectionWrapper}>
+        <ReservationForm />
+      </div>
     </div>
   );
 };

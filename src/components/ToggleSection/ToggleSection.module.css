@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #dadde1;
+  margin-top: 60px;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  border: none;
+  background: transparent;
+  padding-inline: 0;
+  padding-bottom: 24px;
+}
