@@ -7,21 +7,27 @@ import Button from "../Button/Button.jsx";
 const SearchForm = () => {
   const [value, setValue] = useState("");
 
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
   const vehicleEquipment = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
   const vehicleType = ["Van", "Fully Integrated", "Alcove"];
 
   const initialValues = {
     vehicleEquipment: [],
     vehicleType: "",
+    location: "",
   };
 
-  const handleChange = (e) => {
-    setValue(e.target.value);
+  const handleSubmit = (values) => {
+    const { vehicleEquipment, vehicleType, location } = values;
+    console.log("values", values);
+    //  dispatch(chooseLocation(values.location));
+    //  dispatch(setEquipmentFilter(values.equipment));
+    //  dispatch(setVechicleType(values.form));
   };
-
-  const handleSubmit = () => {};
   return (
-    <Formik initialValues={initialValues} obSubmit={handleSubmit}>
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <Form>
         {/* Location */}
         <label htmlFor="location" className={css.greyText}>
@@ -30,11 +36,9 @@ const SearchForm = () => {
         <div className={css.locationWrapper}>
           <Field
             className={`${css.inputLocation} ${css.inputFocus}`}
-            onChange={handleChange}
             name="location"
-            id="location"
-            list="location-name"
             placeholder="City"
+            onChange={handleChange}
           />
           <svg
             className={`${css.locationIcon} ${value ? css.filled : ""}`}

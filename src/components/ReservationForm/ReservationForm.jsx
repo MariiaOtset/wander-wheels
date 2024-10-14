@@ -28,6 +28,7 @@ const ReservationForm = () => {
     try {
       toast.success("Your booking has been sent successfully");
       resetForm();
+      // eslint-disable-next-line no-unused-vars
     } catch (error) {
       toast.error("Something went wrong, please try again");
     }
