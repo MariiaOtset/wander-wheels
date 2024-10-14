@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   gap: 16px;
+  margin-bottom: 16px;
 }
 
 .avatar {
@@ -26,4 +27,17 @@
 
 .nameWithStars {
   padding: 8px 0;
+}
+
+.text {
+  color: #475467;
+  line-height: 1.5;
+}
+
+.yellow {
+  fill: #ffc531;
+}
+
+.grey {
+  fill: #f2f4f7;
 }
