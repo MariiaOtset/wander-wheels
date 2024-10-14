@@ -8,7 +8,7 @@ const ReservationFormSection = () => {
       <p className={css.text}>
         Stay connected! We are always ready to help you.
       </p>
-      <ReservationForm />;
+      <ReservationForm />
     </div>
   );
 };
