@@ -31,10 +31,12 @@ const CatalogPage = () => {
     searchParamsNames.forEach((item) => {
       paramObject[item] = params.get(item);
     });
+
     return paramObject;
   }, [params]);
 
   const dispatch = useDispatch();
+
   useEffect(() => {
     async function name() {
       await dispatch(fetchCampers({ page, ...memoizedParamObject }));
@@ -50,19 +52,6 @@ const CatalogPage = () => {
     dispatch(resetItems());
     setPage(1);
   };
-
-  // useEffect(() => {
-  //   dispatch(fetchCampers());
-  // });
-
-  // const handleLoadMore = () => {
-  //   setPage(page + 1);
-  // };
-
-  // const onSearch = () => {
-  //   dispatch(resetItems());
-  //   setPage(1);
-  // };
 
   return (
     <div className={css.catalogPage}>

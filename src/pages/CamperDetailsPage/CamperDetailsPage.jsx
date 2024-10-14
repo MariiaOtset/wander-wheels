@@ -35,7 +35,7 @@ const CamperDetailsPage = () => {
       <h2 className={css.title}>{selectedCamper.name}</h2>
       <CampersReviewsAndLocation camper={selectedCamper} />
       <h2 className={`${css.title} ${css.price}`}>
-        €{selectedCamper.price}.00
+        €{selectedCamper.price.toFixed(2)}
       </h2>
       <Gallery camper={selectedCamper} />
       <p className={css.description}>{selectedCamper.description}</p>

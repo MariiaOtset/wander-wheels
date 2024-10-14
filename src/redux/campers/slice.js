@@ -23,6 +23,11 @@ const handlePending = (state) => {
 const campersSlice = createSlice({
   name: "campers",
   initialState,
+  reducers: {
+    resetItems: (state) => {
+      state.items = [];
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCampers.pending, handlePending)
