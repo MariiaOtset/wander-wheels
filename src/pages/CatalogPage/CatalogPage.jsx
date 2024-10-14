@@ -13,6 +13,8 @@ import {
   selectNotFound,
   selectShownMoreBtn,
 } from "../../redux/campers/selectors.js";
+import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn.jsx";
+import Loader from "../../components/Loader/Loader.jsx";
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
@@ -64,19 +66,15 @@ const CatalogPage = () => {
 
   return (
     <div className={css.catalogPage}>
-      {/* <SearchForm onSearch={onSearch} />
-      <CampersList handleLoadMore={handleLoadMore} /> */}
       <SearchForm onSearch={onSearch} />
       <div className={css.listWrapper}>
         {!isError && !isNotFound && (
           <CampersList handleLoadMore={handleLoadMore} />
         )}
-        {!loading && shownMoreBtn && (
-          <LoadMoreButton onClick={handleLoadMore} />
-        )}
         {loading && <Loader />}
-        {isNotFound && !loading && <NotFoundComponent />}
-        {isError && !loading && <ErrorComponent />}
+        {!loading && shownMoreBtn && <LoadMoreBtn onClick={handleLoadMore} />}
+        {/* {isNotFound && !loading && <NotFoundComponent />}
+        {isError && !loading && <ErrorComponent />} */}
       </div>
     </div>
   );

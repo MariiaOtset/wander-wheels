@@ -10,6 +10,7 @@ import ToggleSection from "../../components/ToggleSection/ToggleSection.jsx";
 import ReviewsSection from "../../components/ReviewsSection/ReviewsSection.jsx";
 import FeaturesSection from "../../components/FeaturesSection/FeaturesSection.jsx";
 import ReservationFormSection from "../../components/ReservationFormSection/ReservationFormSection.jsx";
+import Loader from "../../components/Loader/Loader.jsx";
 
 const CamperDetailsPage = () => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const CamperDetailsPage = () => {
   const selectedCamper = useSelector(selectCamper);
 
   if (!selectedCamper) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
