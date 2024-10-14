@@ -1,15 +1,18 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+// import Calendar from "react-calendar";
+// import "react-calendar/dist/Calendar.css";
 import Button from "../Button/Button.jsx";
 import css from "./ReservationForm.module.css";
-import { useState } from "react";
+import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker-cssmodules.css";
+import DatePicker from "react-datepicker";
+// import { useState } from "react";
 
 const ReservationForm = () => {
   // const Value = new Date();
-  const [value, onChange] = useState(new Date());
+  // const [value, onChange] = useState(new Date());
 
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
@@ -34,6 +37,24 @@ const ReservationForm = () => {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  const CustomDatePicker = ({ field, form }) => {
+    const today = new Date();
+    return (
+      <DatePicker
+        {...field}
+        selected={(field.value && new Date(field.value)) || null}
+        onChange={(val) => form.setFieldValue(field.name, val)}
+        dateFormat="MMMM d, yyyy"
+        minDate={today}
+        placeholderText="Booking date*"
+        showPopperArrow={true}
+        className={css.input}
+        calendarClassName={css.calendarStyles}
+        popperPlacement="bottom-start"
+      />
+    );
   };
 
   return (
@@ -64,15 +85,9 @@ const ReservationForm = () => {
         <div className={css.inputWrapper}>
           <Field
             placeholder="Booking Date*"
-            className={css.input}
+            className={`${css.input}  ${css.calendar}`}
             name="bookingDate"
-          />{" "}
-          <Calendar
-            className={css.calendar}
-            onChange={onChange}
-            value={value}
-            defaultActiveStartDate={new Date()}
-            locale="en-GB"
+            component={CustomDatePicker}
           />
           <ErrorMessage
             name="bookingDate"

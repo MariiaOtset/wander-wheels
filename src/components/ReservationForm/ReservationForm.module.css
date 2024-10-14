@@ -9,7 +9,7 @@
   height: 60px;
   padding: 18px;
   border-radius: 12px;
-  background: #f7f7f7;
+  background-color: #f7f7f7;
   border-color: transparent;
   outline: transparent;
 }
@@ -20,15 +20,6 @@
 
 .btn button {
   margin-top: 10px;
-}
-
-.calendar {
-  width: 276px;
-  height: 274px;
-  border: none; /* Убираем рамку по умолчанию */
-  border-radius: 8px; /* Красивая обводка */
-  overflow: hidden; /* Скрываем лишнее */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для объема */
 }
 
 .textarea {
