@@ -1,19 +1,13 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import toast from "react-hot-toast";
-// import Calendar from "react-calendar";
-// import "react-calendar/dist/Calendar.css";
+import toast, { Toaster } from "react-hot-toast";
 import Button from "../Button/Button.jsx";
 import css from "./ReservationForm.module.css";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
 import DatePicker from "react-datepicker";
-// import { useState } from "react";
 
 const ReservationForm = () => {
-  // const Value = new Date();
-  // const [value, onChange] = useState(new Date());
-
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
     email: Yup.string()
@@ -30,12 +24,12 @@ const ReservationForm = () => {
     comment: "",
   };
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, { resetForm }) => {
     try {
-      console.log(values);
-      toast.success();
+      toast.success("Your booking has been sent successfully");
+      resetForm();
     } catch (error) {
-      console.log(error);
+      toast.error("Something went wrong, please try again");
     }
   };
 
@@ -72,6 +66,7 @@ const ReservationForm = () => {
             type="text"
           />
           <ErrorMessage name="name" component="div" className={css.error} />
+          <Toaster position="top-right" />
         </div>
         <div className={css.inputWrapper}>
           <Field
