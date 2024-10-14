@@ -1,12 +1,16 @@
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
-// import Calendar from "react-calendar";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import Button from "../Button/Button.jsx";
 import css from "./ReservationForm.module.css";
-// import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useState } from "react";
 
 const ReservationForm = () => {
+  // const Value = new Date();
+  const [value, onChange] = useState(new Date());
+
   const validationSchema = Yup.object({
     name: Yup.string().required("Name is required"),
     email: Yup.string()
@@ -46,7 +50,7 @@ const ReservationForm = () => {
             name="name"
             type="text"
           />
-          {/* <ErrorMessage /> */}
+          <ErrorMessage name="name" component="div" className={css.error} />
         </div>
         <div className={css.inputWrapper}>
           <Field
@@ -55,7 +59,7 @@ const ReservationForm = () => {
             name="email"
             type="email"
           />
-          {/* <ErrorMessage /> */}
+          <ErrorMessage name="email" component="div" className={css.error} />
         </div>
         <div className={css.inputWrapper}>
           <Field
@@ -63,8 +67,18 @@ const ReservationForm = () => {
             className={css.input}
             name="bookingDate"
           />{" "}
-          {/* <Calendar className={css.calendar}/> */}
-          {/* <ErrorMessage /> */}
+          <Calendar
+            className={css.calendar}
+            onChange={onChange}
+            value={value}
+            defaultActiveStartDate={new Date()}
+            locale="en-GB"
+          />
+          <ErrorMessage
+            name="bookingDate"
+            component="div"
+            className={css.error}
+          />
         </div>
         <div className={css.inputWrapper}>
           <Field
