@@ -6,6 +6,8 @@ const initialState = {
   camperById: null,
   loading: false,
   error: null,
+  total: null,
+  notFound: false,
 };
 
 const handleRejected = (state, action) => {
@@ -27,6 +29,7 @@ const campersSlice = createSlice({
       .addCase(fetchCampers.fulfilled, (state, { payload }) => {
         state.loading = false;
         state.items = payload.items;
+        state.total = payload.total;
       })
       .addCase(fetchCampers.rejected, handleRejected)
 
@@ -40,3 +43,4 @@ const campersSlice = createSlice({
 });
 
 export const campersReducer = campersSlice.reducer;
+export const { resetItems } = campersSlice.actions;

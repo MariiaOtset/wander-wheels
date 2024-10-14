@@ -1,31 +1,116 @@
 import css from "./SearchForm.module.css";
 import { Formik, Form, Field } from "formik";
 import sprite from "../../images/sprite.svg";
-import { useState } from "react";
 import Button from "../Button/Button.jsx";
+import { useSearchParams } from "react-router-dom";
+import {
+  equipmentName,
+  equipmentOptions,
+  vehicleTypeOptions,
+  searchParamsNames,
+} from "../../constants/index.js";
+import { toCamelCase } from "../../utils/toCamelCase.js";
+import { useSelector } from "react-redux";
+import { selectButtonDisabled } from "../../redux/campers/selectors";
+import { deepEqual } from "../../utils/compareTwoObjects";
+import { capitalizeFirstLetter } from "../../utils/capitalizeFirstLetter";
 
-const SearchForm = () => {
-  const [value, setValue] = useState("");
+const SearchForm = ({ onSearch }) => {
+  const isDisabled = useSelector(selectButtonDisabled);
+  const [params, setParams] = useSearchParams();
+  const paramObject = {};
 
-  const handleChange = (e) => {
-    setValue(e.target.value);
+  searchParamsNames.forEach((item) => {
+    paramObject[item] = params.get(item);
+  });
+
+  const getInitialEquipment = () => {
+    const initialArray = [];
+    for (let key in paramObject) {
+      if (key === "transmission") {
+        initialArray.push(capitalizeFirstLetter(paramObject[key]));
+      }
+      if (paramObject[key]) {
+        initialArray.push(capitalizeFirstLetter(key));
+      }
+    }
+    return initialArray;
   };
-  const vehicleEquipment = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
-  const vehicleType = ["Van", "Fully Integrated", "Alcove"];
+
+  const getInitialVehicleType = () => {
+    let initialValue = "";
+
+    if (paramObject.form) {
+      initialValue = capitalizeFirstLetter(paramObject.form);
+    }
+
+    return initialValue;
+  };
 
   const initialValues = {
-    vehicleEquipment: [],
-    vehicleType: "",
-    location: "",
+    equipment: getInitialEquipment(),
+    vehicleType: getInitialVehicleType()
+      .replace(/([A-Z])/g, " $1")
+      .trim(),
+    location: paramObject.location || "",
   };
 
   const handleSubmit = (values) => {
-    const { vehicleEquipment, vehicleType, location } = values;
-    console.log("values", values);
-    //  dispatch(chooseLocation(values.location));
-    //  dispatch(setEquipmentFilter(values.equipment));
-    //  dispatch(setVechicleType(values.form));
+    const { equipment, vehicleType, location } = values;
+
+    searchParamsNames.forEach((item) => params.delete(item));
+
+    equipment.forEach((item) => {
+      switch (item) {
+        case equipmentName.AC:
+          params.set(equipmentName.AC, true);
+          break;
+        case equipmentName.TV:
+          params.set(equipmentName.TV, true);
+          break;
+        case equipmentName.Bathroom:
+          params.set(equipmentName.Bathroom.toLowerCase(), true);
+          break;
+        case equipmentName.Kitchen:
+          params.set(equipmentName.Kitchen.toLowerCase(), true);
+          break;
+        case equipmentName.Automatic:
+          params.set("transmission", equipmentName.Automatic.toLowerCase());
+          break;
+        case equipmentName.Radio:
+          params.set(equipmentName.Radio.toLowerCase(), true);
+          break;
+        case equipmentName.Refrigerator:
+          params.set(equipmentName.Refrigerator.toLowerCase(), true);
+          break;
+        case equipmentName.Microwave:
+          params.set(equipmentName.Microwave.toLowerCase(), true);
+          break;
+        default:
+          break;
+      }
+    });
+
+    if (vehicleType.trim() !== "") {
+      params.set("form", toCamelCase(vehicleType));
+    }
+
+    if (location.trim() !== "") {
+      params.set("location", location);
+    }
+
+    const newParamsObject = {};
+    searchParamsNames.forEach((item) => {
+      newParamsObject[item] = params.get(item);
+    });
+
+    setParams(params);
+    if (deepEqual(paramObject, newParamsObject)) return;
+
+    onSearch();
+    console.log(values);
   };
+
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <Form>
@@ -38,10 +123,10 @@ const SearchForm = () => {
             className={`${css.inputLocation} ${css.inputFocus}`}
             name="location"
             placeholder="City"
-            onChange={handleChange}
+            id="location"
           />
           <svg
-            className={`${css.locationIcon} ${value ? css.filled : ""}`}
+            className={`${css.locationIcon} ${css.filled}`}
             width="20"
             height="20"
           >
@@ -55,14 +140,14 @@ const SearchForm = () => {
           <h3 className={css.vehicleTitle}>Vehicle equipment</h3>
           <span className={css.bottomLine}></span>
           <div className={css.vehicleOptions}>
-            {vehicleEquipment.map((option) => (
+            {equipmentOptions.map((option) => (
               <div key={option}>
                 <Field
                   type="checkbox"
                   className={css.options}
                   id={option}
                   value={option}
-                  name="vehicleEquipment"
+                  name="equipment"
                 ></Field>
                 <label htmlFor={option} className={css.optionLabel}>
                   <svg width="32" height="32">
@@ -84,7 +169,7 @@ const SearchForm = () => {
           <h3 className={css.vehicleTitle}>Vehicle type</h3>
           <span className={css.bottomLine}></span>
           <div className={css.vehicleOptions}>
-            {vehicleType.map((option) => (
+            {vehicleTypeOptions.map((option) => (
               <div key={option}>
                 <Field
                   type="radio"
@@ -107,7 +192,7 @@ const SearchForm = () => {
             ))}
           </div>
         </div>
-        <Button text="Search" />
+        <Button text="Search" isDisabled={isDisabled} />
       </Form>
     </Formik>
   );
