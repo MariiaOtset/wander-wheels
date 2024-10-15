@@ -25,26 +25,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.hiddenInput {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  visibility: hidden;
-}
-
-.label {
-  cursor: pointer;
-  height: 26px;
-}
-
-/* .icon {
-  fill: #101828;
-  stroke: #101828;
-} */
-
-.hiddenInput:checked + .icon {
-  /* fill: transparent;
-  stroke: #e44848; */
-  fill: #e44848;
-}

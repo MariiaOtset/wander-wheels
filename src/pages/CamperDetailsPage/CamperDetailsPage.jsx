@@ -1,6 +1,11 @@
 import CampersReviewsAndLocation from "../../components/CampersReviewsAndLocation/CampersReviewsAndLocation.jsx";
 import css from "./CamperDetailsPage.module.css";
-import { selectCamper } from "../../redux/campers/selectors.js";
+import {
+  selectCamper,
+  selectError,
+  selectLoading,
+  selectNotFound,
+} from "../../redux/campers/selectors.js";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -11,13 +16,25 @@ import ReviewsSection from "../../components/ReviewsSection/ReviewsSection.jsx";
 import FeaturesSection from "../../components/FeaturesSection/FeaturesSection.jsx";
 import ReservationFormSection from "../../components/ReservationFormSection/ReservationFormSection.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
+import NotFound from "../../components/NotFound/NotFound.jsx";
+import ErrorComponent from "../../components/ErrorComponent/ErrorComponent.jsx";
+import { resetItems } from "../../redux/campers/slice.js";
 
 const CamperDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const [isFeaturesShown, setIsFeaturesShown] = useState(true);
 
+  // useEffect(() => {
+  //   async function name() {
+  //     await dispatch(fetchCamperById(id)).unwrap();
+  //   }
+  //   name();
+  // }, [id, dispatch]);
+
   useEffect(() => {
+    dispatch(resetItems());
+
     async function name() {
       await dispatch(fetchCamperById(id)).unwrap();
     }
@@ -25,10 +42,12 @@ const CamperDetailsPage = () => {
   }, [id, dispatch]);
 
   const selectedCamper = useSelector(selectCamper);
+  console.log(selectedCamper);
+  const loading = useSelector(selectLoading);
+  const isNotFound = useSelector(selectNotFound);
+  const isError = useSelector(selectError);
 
-  if (!selectedCamper) {
-    return <Loader />;
-  }
+  console.log(selectedCamper.name);
 
   return (
     <div className={css.page}>
@@ -47,6 +66,9 @@ const CamperDetailsPage = () => {
         {isFeaturesShown ? <FeaturesSection /> : <ReviewsSection />}
         <ReservationFormSection />
       </div>
+      {loading && <Loader />}
+      {isNotFound && !loading && <NotFound />}
+      {isError && !loading && <ErrorComponent />}
     </div>
   );
 };

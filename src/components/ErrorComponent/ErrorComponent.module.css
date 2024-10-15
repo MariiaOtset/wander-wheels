@@ -1,0 +1,21 @@
+.text {
+  font-size: 25px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px 150px;
+  gap: 15px;
+  padding: 50px;
+  border: 1px solid rgb(234, 197, 197);
+  border-radius: 30px;
+}
+
+.icon {
+  width: 100px;
+  height: 90px;
+  fill: rgb(245, 2, 2);
+}

@@ -1,0 +1,15 @@
+.heart {
+  width: 26px;
+  height: 24px;
+  transform: translateY(2px);
+}
+
+.favorite {
+  fill: #e44848;
+}
+
+.button {
+  padding: 0 12px;
+  background: transparent;
+  border: none;
+}

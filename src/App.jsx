@@ -8,6 +8,7 @@ const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
 const CamperDetailsPage = lazy(() =>
   import("./pages/CamperDetailsPage/CamperDetailsPage")
 );
+const NotFound = lazy(() => import("../src/components/NotFound/NotFound.jsx"));
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:id" element={<CamperDetailsPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </>

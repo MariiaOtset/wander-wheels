@@ -10,14 +10,20 @@ const initialState = {
   notFound: false,
 };
 
-const handleRejected = (state, action) => {
-  state.loading = false;
-  state.error = action.payload;
+const handleRejected = (state, { payload }) => {
+  if (payload.status === 404) {
+    state.notFound = true;
+    state.loading = false;
+  } else {
+    state.error = true;
+    state.loading = false;
+  }
 };
 
 const handlePending = (state) => {
   state.loading = true;
   state.error = null;
+  state.notFound = false;
 };
 
 const campersSlice = createSlice({

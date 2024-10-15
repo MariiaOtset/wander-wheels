@@ -15,6 +15,8 @@ import {
 } from "../../redux/campers/selectors.js";
 import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
+import NotFound from "../../components/NotFound/NotFound.jsx";
+import ErrorComponent from "../../components/ErrorComponent/ErrorComponent.jsx";
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
@@ -36,7 +38,6 @@ const CatalogPage = () => {
   }, [params]);
 
   const dispatch = useDispatch();
-
   useEffect(() => {
     async function name() {
       await dispatch(fetchCampers({ page, ...memoizedParamObject }));
@@ -62,8 +63,8 @@ const CatalogPage = () => {
         )}
         {loading && <Loader />}
         {!loading && shownMoreBtn && <LoadMoreBtn onClick={handleLoadMore} />}
-        {/* {isNotFound && !loading && <NotFoundComponent />}
-        {isError && !loading && <ErrorComponent />} */}
+        {isNotFound && !loading && <NotFound />}
+        {isError && !loading && <ErrorComponent />}
       </div>
     </div>
   );
