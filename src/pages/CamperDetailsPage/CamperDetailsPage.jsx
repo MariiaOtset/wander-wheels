@@ -25,13 +25,6 @@ const CamperDetailsPage = () => {
   const dispatch = useDispatch();
   const [isFeaturesShown, setIsFeaturesShown] = useState(true);
 
-  // useEffect(() => {
-  //   async function name() {
-  //     await dispatch(fetchCamperById(id)).unwrap();
-  //   }
-  //   name();
-  // }, [id, dispatch]);
-
   useEffect(() => {
     dispatch(resetItems());
 
@@ -42,30 +35,31 @@ const CamperDetailsPage = () => {
   }, [id, dispatch]);
 
   const selectedCamper = useSelector(selectCamper);
-  console.log(selectedCamper);
   const loading = useSelector(selectLoading);
   const isNotFound = useSelector(selectNotFound);
   const isError = useSelector(selectError);
 
-  console.log(selectedCamper.name);
-
   return (
     <div className={css.page}>
-      <h2 className={css.title}>{selectedCamper.name}</h2>
-      <CampersReviewsAndLocation camper={selectedCamper} />
-      <h2 className={`${css.title} ${css.price}`}>
-        €{selectedCamper.price.toFixed(2)}
-      </h2>
-      <Gallery camper={selectedCamper} />
-      <p className={css.description}>{selectedCamper.description}</p>
-      <ToggleSection
-        isFeaturesShown={isFeaturesShown}
-        setIsFeaturesShown={setIsFeaturesShown}
-      />
-      <div className={css.sectionsWrapper}>
-        {isFeaturesShown ? <FeaturesSection /> : <ReviewsSection />}
-        <ReservationFormSection />
-      </div>
+      {selectedCamper && (
+        <>
+          <h2 className={css.title}>{selectedCamper.name}</h2>
+          <CampersReviewsAndLocation camper={selectedCamper} />
+          <h2 className={`${css.title} ${css.price}`}>
+            €{selectedCamper.price.toFixed(2)}
+          </h2>
+          <Gallery camper={selectedCamper} />
+          <p className={css.description}>{selectedCamper.description}</p>
+          <ToggleSection
+            isFeaturesShown={isFeaturesShown}
+            setIsFeaturesShown={setIsFeaturesShown}
+          />
+          <div className={css.sectionsWrapper}>
+            {isFeaturesShown ? <FeaturesSection /> : <ReviewsSection />}
+            <ReservationFormSection />
+          </div>
+        </>
+      )}
       {loading && <Loader />}
       {isNotFound && !loading && <NotFound />}
       {isError && !loading && <ErrorComponent />}
