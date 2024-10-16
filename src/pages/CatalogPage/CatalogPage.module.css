@@ -3,3 +3,8 @@
   gap: 64px;
   padding: 48px 64px 52px;
 }
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+}

@@ -86,6 +86,12 @@ const SearchForm = ({ onSearch }) => {
         case equipmentName.Microwave:
           params.set(equipmentName.Microwave.toLowerCase(), true);
           break;
+        case equipmentName.Petrol:
+          params.set(equipmentName.Petrol.toLowerCase(), true);
+          break;
+        case equipmentName.Water:
+          params.set(equipmentName.Water.toLowerCase(), true);
+          break;
         default:
           break;
       }
@@ -108,7 +114,6 @@ const SearchForm = ({ onSearch }) => {
     if (deepEqual(paramObject, newParamsObject)) return;
 
     onSearch();
-    console.log(values);
   };
 
   return (

@@ -3,10 +3,13 @@ export const equipmentName = {
   Automatic: "Automatic",
   Kitchen: "Kitchen",
   TV: "TV",
-  Bathroom: "Bathroom",
+  Bathroom: "Shower",
   Microwave: "Microwave",
   Refrigerator: "Refrigerator",
   Radio: "Radio",
+  Petrol: "Petrol",
+  Water: "Water",
+  Gas: "Gas",
 };
 export const vehicleTypeName = {
   Van: "Van",
@@ -26,6 +29,9 @@ export const searchParamsNames = [
   "refrigerator",
   "microwave",
   "radio",
+  "petrol",
+  "water",
+  "gas",
 ];
 
 export const equipmentOptions = [
@@ -37,6 +43,9 @@ export const equipmentOptions = [
   equipmentName.Refrigerator,
   equipmentName.Microwave,
   equipmentName.Radio,
+  equipmentName.Petrol,
+  equipmentName.Water,
+  equipmentName.Gas,
 ];
 export const vehicleTypeOptions = [
   vehicleTypeName.Van,

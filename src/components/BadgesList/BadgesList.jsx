@@ -7,10 +7,10 @@ const BadgesList = ({ camper }) => {
       {camper.transmission === "automatic" && <BadgesItem badge="Automatic" />}
       {camper.engine === "petrol" && <BadgesItem badge="Petrol" />}
       {camper.AC && <BadgesItem badge="AC" />}
-      {camper.bathroom && <BadgesItem badge="Bathroom" />}
+      {camper.bathroom && <BadgesItem badge="Shower" />}
       {camper.kitchen && <BadgesItem badge="Kitchen" />}
       {camper.TV && <BadgesItem badge="TV" />}
-      {camper.radio === "petrol" && <BadgesItem badge="Radio" />}
+      {camper.radio && <BadgesItem badge="Radio" />}
       {camper.refrigerator && <BadgesItem badge="Refrigerator" />}
       {camper.microwave && <BadgesItem badge="Microwave" />}
       {camper.gas && <BadgesItem badge="Gas" />}
