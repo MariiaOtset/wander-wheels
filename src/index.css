@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
   src: url("./fonts/Inter_18pt-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
   src: url("./fonts/Inter_18pt-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
   src: url("./fonts/Inter_18pt-SemiBold.ttf");
   font-weight: 600;
 }
@@ -29,7 +29,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff;
-  /* scroll-behavior: smooth; */
+  font-family: "Inter", sans-serif;
 }
 
 button {

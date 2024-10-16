@@ -8,8 +8,9 @@
       rgba(0, 0, 0, 0.2) 100%
     ),
     url("/src/images/home-page/hero.jpg") lightgray 0px -192.086px / 100% 138.099%;
-  /* background-size: 100%; */
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (min-resolution: 192dpi) {

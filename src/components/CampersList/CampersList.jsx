@@ -2,7 +2,6 @@ import { useSelector } from "react-redux";
 import { selectCampers } from "../../redux/campers/selectors.js";
 import CampersItem from "../CampersItem/CampersItem.jsx";
 import css from "./CampersList.module.css";
-// import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn.jsx";
 
 const CampersList = () => {
   const campers = useSelector(selectCampers);
@@ -18,7 +17,6 @@ const CampersList = () => {
           );
         })}
       </ul>
-      {/* <LoadMoreBtn /> */}
     </div>
   );
 };
