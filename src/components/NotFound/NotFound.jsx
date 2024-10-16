@@ -7,7 +7,9 @@ const NotFound = () => {
       <FaTruck className={css.icon} />
       <h1>404</h1>
       <h2>Page not found</h2>
-      <p>Looks like you took a wrong turn. This page has gone on a trip!</p>
+      <p className={css.text}>
+        Looks like you took a wrong turn. This page has gone on a trip!
+      </p>
       <a href="/" className={css.link}>
         Come back to home page
       </a>

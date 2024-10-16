@@ -3,16 +3,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 100px 150px;
+  /* margin: 100px 150px; */
   gap: 15px;
-  padding: 50px;
+  padding: 190px;
   border: 1px solid rgb(234, 197, 197);
   border-radius: 30px;
 }
 
 .icon {
-  width: 100px;
-  height: 90px;
+  width: 200px;
+  height: 200px;
   fill: rgb(255, 105, 105);
   margin-bottom: 15px;
 }
@@ -32,4 +32,9 @@
 
 .link {
   color: rgb(129, 213, 2);
+  font-size: 20px;
+}
+
+.text {
+  font-size: 17px;
 }

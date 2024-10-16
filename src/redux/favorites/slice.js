@@ -29,4 +29,5 @@ export const favoritesReducer = persistReducer(
   persistConfig,
   favoritesSlice.reducer
 );
+
 export const { setFavorite } = favoritesSlice.actions;
