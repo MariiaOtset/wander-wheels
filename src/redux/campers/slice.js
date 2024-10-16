@@ -22,7 +22,7 @@ const handleRejected = (state, { payload }) => {
 
 const handlePending = (state) => {
   state.loading = true;
-  state.error = null;
+  state.error = false;
   state.notFound = false;
 };
 
@@ -39,7 +39,7 @@ const campersSlice = createSlice({
       .addCase(fetchCampers.pending, handlePending)
       .addCase(fetchCampers.fulfilled, (state, { payload }) => {
         state.loading = false;
-        state.items = payload.items;
+        state.items = [...state.items, ...payload.items];
         state.total = payload.total;
       })
       .addCase(fetchCampers.rejected, handleRejected)

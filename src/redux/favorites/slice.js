@@ -9,11 +9,10 @@ const favoritesSlice = createSlice({
   },
   reducers: {
     setFavorite(state, { payload }) {
-      console.log(payload);
-
       const { id } = payload;
 
       const index = state.items.findIndex((item) => item.id === id);
+
       if (index !== -1) state.items.splice(index, 1);
       else state.items.push(payload);
     },
