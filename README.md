@@ -9,7 +9,6 @@ Visit the live site: [Travel Trucks](https://wander-wheels-two.vercel.app/)
 3. [Backend API](#backend-api)
 4. [Technologies](#technologies)
 5. [Author](#author)
-6. [Contacts](#contacts)
 
 ## Project Description
 
@@ -73,9 +72,3 @@ GET https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers/3
 ## Author
 
 Mariia Otset - Developer - [GitHub](https://github.com/MariiaOtset)
-
-## Contacts
-
-If you have any questions or suggestions, feel free to reach out:
-
-Email: mariiaotset@gmail.com
