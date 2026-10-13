@@ -25,3 +25,7 @@
   align-items: center;
   justify-content: center;
 }
+.wrapper { gap: 12px; flex-wrap: wrap; }
+.title { min-width: 0; white-space: normal; overflow-wrap: anywhere; font-size: clamp(18px,2.5vw,24px); }
+.priceWrapper { flex-wrap: nowrap; flex-shrink: 0; }
+@media (max-width: 420px) { .wrapper { align-items: flex-start; } .priceWrapper { gap: 8px; } }
