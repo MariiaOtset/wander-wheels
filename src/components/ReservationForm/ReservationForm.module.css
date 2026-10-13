@@ -31,3 +31,8 @@
   margin-top: 5px;
   color: red;
 }
+
+.wrapper,.inputWrapper,.input { width: 100%; min-width: 0; }
+.input { max-width: 100%; }
+.wrapper :global(.react-datepicker-wrapper),.wrapper :global(.react-datepicker__input-container) { width: 100%; }
+@media (max-width: 600px) { .input { height: 54px; padding: 15px; } .textarea { height: 118px; } }
