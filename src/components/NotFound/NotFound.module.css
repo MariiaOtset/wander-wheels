@@ -37,3 +37,7 @@
 .text {
   font-size: 17px;
 }
+
+.wrapper { width: 100%; max-width: 650px; padding: clamp(32px,7vw,80px) 20px; text-align: center; }
+.icon { width: 100px; height: 100px; }
+@media (max-width: 600px) { .wrapper { gap: 12px; } .text { font-size: 15px; line-height: 1.5; } }
