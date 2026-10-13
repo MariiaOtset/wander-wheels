@@ -12,6 +12,7 @@ import {
   selectLoading,
   selectNotFound,
   selectShownMoreBtn,
+  selectTotal,
 } from "../../redux/campers/selectors.js";
 import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
@@ -23,6 +24,7 @@ const CatalogPage = () => {
 
   const loading = useSelector(selectLoading);
   const shownMoreBtn = useSelector(selectShownMoreBtn);
+  const total = useSelector(selectTotal);
   const isNotFound = useSelector(selectNotFound);
   const isError = useSelector(selectError);
 
@@ -63,6 +65,7 @@ const CatalogPage = () => {
         )}
         {loading && <Loader />}
         {!loading && shownMoreBtn && <LoadMoreBtn onClick={handleLoadMore} />}
+        {total === 0 && !loading && !isError && <div className={css.emptyState}><h2>No campers found</h2><p>Try a different vehicle type, location, or equipment filter.</p></div>}
         {isNotFound && !loading && <NotFound />}
         {isError && !loading && <ErrorComponent />}
       </div>
