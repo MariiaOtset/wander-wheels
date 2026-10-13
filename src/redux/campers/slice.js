@@ -11,12 +11,11 @@ const initialState = {
 };
 
 const handleRejected = (state, { payload }) => {
-  if (payload.status === 404) {
+  state.loading = false;
+  if (payload?.status === 404) {
     state.notFound = true;
-    state.loading = false;
   } else {
     state.error = true;
-    state.loading = false;
   }
 };
 
@@ -32,6 +31,9 @@ const campersSlice = createSlice({
   reducers: {
     resetItems: (state) => {
       state.items = [];
+      state.total = null;
+      state.notFound = false;
+      state.error = null;
     },
   },
   extraReducers: (builder) => {
@@ -39,11 +41,10 @@ const campersSlice = createSlice({
       .addCase(fetchCampers.pending, handlePending)
       .addCase(fetchCampers.fulfilled, (state, { payload }) => {
         state.loading = false;
-        state.items = [...state.items, ...payload.items];
-        state.total = payload.total;
+        state.items = [...state.items, ...(payload.items ?? [])];
+        state.total = payload.total ?? 0;
       })
       .addCase(fetchCampers.rejected, handleRejected)
-
       .addCase(fetchCamperById.pending, handlePending)
       .addCase(fetchCamperById.fulfilled, (state, { payload }) => {
         state.loading = false;
