@@ -18,3 +18,6 @@
 .active {
   border-bottom: solid 5px #e44848;
 }
+
+.wrapper { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 36px; margin-bottom: 30px; }
+.btn { margin-right: 0; font-size: clamp(17px,3vw,20px); }
