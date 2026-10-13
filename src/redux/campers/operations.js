@@ -9,13 +9,19 @@ export const fetchCampers = createAsyncThunk(
   async (param, thunkAPI) => {
     const existingParams = removeNulls(param);
     const queryString = new URLSearchParams(existingParams);
-
     try {
       const response = await axios.get(`/campers?${queryString}&limit=5`);
       return response.data;
     } catch (error) {
-      const { status, message } = error;
-      return thunkAPI.rejectWithValue({ status, message });
+      // MockAPI responds with HTTP 404 when a filtered collection has no matches.
+      // An empty catalog is not a missing page or an application failure.
+      if (error.response?.status === 404) {
+        return { items: [], total: 0 };
+      }
+      return thunkAPI.rejectWithValue({
+        status: error.response?.status ?? 0,
+        message: error.message ?? "Failed to load campers",
+      });
     }
   }
 );
@@ -27,7 +33,10 @@ export const fetchCamperById = createAsyncThunk(
       const response = await axios.get(`/campers/${id}`);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
+      return thunkAPI.rejectWithValue({
+        status: error.response?.status ?? 0,
+        message: error.message ?? "Failed to load camper",
+      });
     }
   }
 );
