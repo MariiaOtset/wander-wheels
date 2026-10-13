@@ -22,3 +22,8 @@
 .showBtn {
   margin: 0;
 }
+
+.image { flex: 0 0 35%; width: 35%; max-width: 292px; min-width: 0; }
+.camperInfo { flex: 1; width: auto; min-width: 0; }
+.description { max-width: 100%; width: auto; }
+@media (max-width: 700px) { .image { flex: none; width: 100%; max-width: none; height: clamp(210px,65vw,310px); } .camperInfo { width: 100%; } .description { margin: 16px 0; } }
