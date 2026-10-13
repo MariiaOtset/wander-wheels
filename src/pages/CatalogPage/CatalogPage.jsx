@@ -21,6 +21,7 @@ import ErrorComponent from "../../components/ErrorComponent/ErrorComponent.jsx";
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const loading = useSelector(selectLoading);
   const shownMoreBtn = useSelector(selectShownMoreBtn);
@@ -58,7 +59,24 @@ const CatalogPage = () => {
 
   return (
     <div className={css.catalogPage}>
-      <SearchForm onSearch={onSearch} />
+      <aside className={css.filtersArea} aria-label="Catalog filters">
+        <button
+          type="button"
+          className={css.filtersToggle}
+          aria-expanded={filtersOpen}
+          aria-controls="catalog-filter-controls"
+          onClick={() => setFiltersOpen((open) => !open)}
+        >
+          <span>Filters</span>
+          <span className={css.toggleIndicator} aria-hidden="true">{filtersOpen ? "−" : "+"}</span>
+        </button>
+        <div
+          id="catalog-filter-controls"
+          className={`${css.filtersPanel} ${filtersOpen ? css.filtersExpanded : ""}`}
+        >
+          <SearchForm onSearch={onSearch} />
+        </div>
+      </aside>
       <div className={css.listWrapper}>
         {!isError && !isNotFound && (
           <CampersList handleLoadMore={handleLoadMore} />
