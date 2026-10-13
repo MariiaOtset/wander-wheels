@@ -24,3 +24,8 @@
 .active {
   color: red;
 }
+
+/* Responsive header */
+.wrapper { width: 100%; max-width: 1440px; gap: 0; justify-content: space-between; }
+@media (max-width: 1023px) { .wrapper { padding: 20px 32px; } }
+@media (max-width: 600px) { .wrapper { padding: 18px 16px; min-height: 68px; } .navigation { gap: 16px; } .link { font-size: 14px; } }
