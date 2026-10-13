@@ -96,3 +96,13 @@
 .optionsGap:nth-child(2) {
   padding: 0 16px;
 }
+
+/* Fluid filter controls */
+.locationWrapper,.inputLocation,.vehicleOptions { width: 100%; min-width: 0; }
+.vehicleOptions { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
+.vehicleOptions > div { min-width: 0; position: relative; }
+.optionLabel { width: 100%; min-width: 0; padding: 8px 4px; font-size: 13px; }
+.options { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; visibility: visible; }
+.options:focus-visible + .optionLabel { outline: 2px solid #e44848; outline-offset: 3px; }
+@media (min-width: 601px) and (max-width: 900px) { .vehicleOptions { grid-template-columns: repeat(4,minmax(0,1fr)); } }
+@media (max-width: 380px) { .vehicleOptions { grid-template-columns: repeat(2,minmax(0,1fr)); } .optionLabel { height: 88px; } }
