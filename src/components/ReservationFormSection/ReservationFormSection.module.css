@@ -13,3 +13,7 @@
   color: #6c717b;
   margin-bottom: 24px;
 }
+
+.sectionWrapper { width: 100%; min-width: 0; }
+@media (max-width: 1200px) { .sectionWrapper { padding: 30px; } }
+@media (max-width: 600px) { .sectionWrapper { padding: 22px 16px; } }
