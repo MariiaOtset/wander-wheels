@@ -23,9 +23,7 @@ a {
 }
 
 body {
-  margin: 0 auto;
-  display: flex;
-  place-items: center;
+  margin: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff;
@@ -67,3 +65,10 @@ ol {
   list-style-type: none;
   padding-inline-start: 0;
 }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { width: 100%; overflow-x: clip; }
+body { width: 100%; overflow-x: clip; }
+#root { width: 100%; min-width: 0; }
+button, input, textarea { font: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid #e44848; outline-offset: 3px; }
