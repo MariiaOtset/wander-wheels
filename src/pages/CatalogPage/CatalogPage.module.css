@@ -19,3 +19,37 @@
 @media (max-width: 1279px) { .catalogPage { gap: 28px; padding: 36px 28px 50px; } .catalogPage > :first-child { flex-basis: 310px; } }
 @media (max-width: 900px) { .catalogPage { flex-direction: column; gap: 32px; padding: 28px 22px 52px; } .catalogPage > :first-child { width: 100%; flex: auto; } .listWrapper { width: 100%; } }
 @media (max-width: 600px) { .catalogPage { padding: 24px 16px 44px; } }
+
+/* Keep the desktop sidebar visible; tablets and phones get a collapsible panel. */
+.filtersArea { flex: 0 0 360px; min-width: 0; }
+.filtersPanel { width: 100%; }
+.filtersToggle { display: none; }
+@media (max-width: 1279px) {
+  .filtersArea { flex-basis: 310px; }
+}
+@media (max-width: 1023px) {
+  .catalogPage { flex-direction: column; gap: 24px; }
+  .filtersArea { width: 100%; flex: none; }
+  .filtersToggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 56px;
+    padding: 15px 20px;
+    border-radius: 14px;
+    border: 1px solid #dadde1;
+    background: #f7f7f7;
+    color: #101828;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+  }
+  .filtersToggle:hover { background: #f0f2f5; }
+  .filtersToggle:focus-visible { outline: 2px solid #e44848; outline-offset: 3px; }
+  .toggleIndicator { color: #e44848; font-size: 24px; line-height: 1; }
+  .filtersPanel { display: none; padding: 22px 0 4px; }
+  .filtersExpanded { display: block; }
+  .listWrapper { width: 100%; }
+}
