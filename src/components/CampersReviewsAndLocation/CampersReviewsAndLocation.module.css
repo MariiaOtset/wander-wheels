@@ -33,3 +33,6 @@
 .iconStar {
   fill: #ffc531;
 }
+
+.wrapper { flex-wrap: wrap; gap: 8px 16px; }
+.reviewWrapper,.span { min-width: 0; }
