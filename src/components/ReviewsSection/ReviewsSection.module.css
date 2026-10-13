@@ -7,3 +7,6 @@
 .reviewItem:last-child {
   margin-bottom: 0;
 }
+
+.wrapper { width: 100%; }
+.reviewItem { width: 100%; min-width: 0; overflow-wrap: anywhere; }
