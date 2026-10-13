@@ -1,13 +1,13 @@
 .hero {
   display: flex;
-  width: 1440px;
+  width: 100%;
   height: calc(100vh - 72px);
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2) 0%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    url("/src/images/home-page/hero.jpg") lightgray 0px -192.086px / 100% 138.099%;
+    url("../../images/home-page/hero.jpg") lightgray 0px -192.086px / 100% 138.099%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -20,7 +20,7 @@
         rgba(0, 0, 0, 0.2) 0%,
         rgba(0, 0, 0, 0.2) 100%
       ),
-      url("/src/images/home-page/hero@2x.jpg") lightgray 0px -192.086px / 100% 138.099%;
+      url("../../images/home-page/hero@2x.jpg") lightgray 0px -192.086px / 100% 138.099%;
   }
 }
 
@@ -44,3 +44,6 @@
   font-size: 24px;
   line-height: 1.33;
 }
+
+@media (max-width: 1023px) { .hero { min-height: 560px; height: calc(100svh - 72px); } .wrapper { margin: auto 32px; } .main { font-size: clamp(32px, 5vw, 48px); line-height: 1.15; } }
+@media (max-width: 600px) { .hero { min-height: 480px; height: calc(100svh - 68px); background-position: 55% center; } .wrapper { margin: auto 20px; max-width: 500px; } .main { font-size: clamp(30px, 9vw, 42px); line-height: 1.12; } .secondary { font-size: clamp(17px, 5vw, 22px); line-height: 1.5; } }
