@@ -14,3 +14,7 @@
   padding-bottom: 24px;
   margin: 0 0 24px 0;
 }
+
+.sectionWrapper { width: 100%; min-width: 0; gap: 48px; }
+@media (max-width: 1200px) { .sectionWrapper { padding: 30px; } }
+@media (max-width: 600px) { .sectionWrapper { padding: 22px 16px; gap: 28px; } }
