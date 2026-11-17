@@ -13,7 +13,7 @@ export default function ReservationForm({camper}){
  const baseValues=useMemo(()=>({name:"",email:"",start:"",end:"",comment:""}),[]);
  if(confirmation)return <div className={css.confirmation} role="status"><span aria-hidden="true">✓</span><h4>Your trip, beautifully imagined.</h4><p>This is an interactive portfolio demonstration. No booking has been submitted or reserved.</p><div><strong>{camper?.name}</strong><br/>{confirmation.start} – {confirmation.end}<br/>{confirmation.days} days · €{confirmation.total.toLocaleString("en-GB",{maximumFractionDigits:2})} estimated</div><button type="button" onClick={()=>setConfirmation(null)}>Plan another trip ↗</button></div>;
  return <Formik initialValues={baseValues} validationSchema={schema} onSubmit={(values)=>{const days=nights(values.start,values.end);if(days>0)setConfirmation({start:values.start,end:values.end,days,total:days*price});}}>
- {({values,isValid})=>{const days=nights(values.start,values.end);return <Form className={css.form} noValidate>
+ {({values})=>{const days=nights(values.start,values.end);return <Form className={css.form} noValidate>
   <div className={css.demo}>INTERACTIVE BOOKING DEMO <span>NO PAYMENT REQUIRED</span></div>
   <div className={css.fields}>
     <label>Full name <Field name="name" placeholder="Your name" autoComplete="name"/><ErrorMessage name="name" component="small"/></label>
