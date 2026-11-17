@@ -14,7 +14,7 @@ A premium campervan discovery and trip-planning experience built with React. A p
 - Select dates and calculate an estimated trip price using a no-payment demo planner
 - Fully responsive layout across mobile, tablet, and desktop
 
-**Important:** Booking is a demonstration only. No reservation is created, no availability is checked, and no payment is processed. Vehicle data is provided by an external MockAPI endpoint.
+**Important:** Booking is a demonstration only. No reservation is created, no availability is checked, and no payment is processed. Camper data is bundled with the frontend so browsing works without an external data API.
 
 ## Stack
 
@@ -34,7 +34,7 @@ npm run build
 npm run lint
 ```
 
-The application uses the external demo API at `https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers`. API availability and sorting support depend on that service.
+The original remote MockAPI used by the assignment could leave the catalogue empty when it returned errors. The app now uses a locally bundled inventory of **22 demo campers** (the 13 original GoIT starter records, adapted for the UI, plus 9 new illustrative additions). Filtering, sorting, pagination and details run locally and do not depend on MockAPI availability.
 
 ## Portfolio notes
 
@@ -50,3 +50,13 @@ Designed and developed by [Mariia Otset](https://github.com/MariiaOtset).
 - The comparison is a discovery aid: prices are indicative and no live booking or availability is checked.
 
 **Branch workflow:** this V2 branch is based on the unmerged `feat/portfolio-redesign-v1` branch. Review V1 + V2 before merging to `main`.
+
+## Catalogue reliability and filter coverage
+
+- The first 13 camper IDs are retained so existing favourite/detail links can still resolve; 9 additional camper profiles cover every vehicle type.
+- All eleven selectable amenities and all four vehicle types have matching listings, including a fully equipped example per type so combinations work.
+- Client-side filtering supports case-insensitive destination search and exact vehicle/amenity matching; unrelated cities or contradictory criteria can still return an honest empty state.
+- Sorting and pagination work against the full bundled collection. The homepage featured collection uses the same inventory.
+- Run `npm test` for coverage checks, plus `npm run build` and `npm run lint`.
+
+**Image and data provenance:** the first 13 names and vehicle specs are based on the original GoIT Travel Trucks exercise sample records. Photo URLs point to the GoIT camper image archive, with a fallback image for network failures. All descriptions, prices, reviews and new curated listings are illustrative examples, not claims about actual vehicles or ratings.

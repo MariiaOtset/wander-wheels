@@ -1,15 +1,14 @@
-import {useEffect,useState} from "react";
 import {Link} from "react-router-dom";
-import axios from "axios";
+import {campers} from "../../data/campers.js";
+import {handleCamperImageError} from "../../utils/camperImage.js";
 import Hero from "../../components/Hero/Hero.jsx";
 import css from "./HomePage.module.css";
 
-const api="https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers";
+
 const values=[{number:"01",icon:"✦",title:"A place to call yours",text:"Find thoughtfully equipped campervans with the little comforts that make the road feel like home."},{number:"02",icon:"↗",title:"Room for adventure",text:"From quiet weekends to bucket-list routes, choose the freedom to travel on your own terms."},{number:"03",icon:"♡",title:"Find your kind of escape",text:"Explore real vehicle details, reviews and features before deciding what suits your trip."}];
 export default function HomePage(){
- const [featured,setFeatured]=useState([]);
- useEffect(()=>{let live=true;const controller=new AbortController();axios.get(api,{params:{page:1,limit:3},signal:controller.signal}).then(({data})=>{if(live)setFeatured(Array.isArray(data)?data.slice(0,3):(data.items||[]).slice(0,3));}).catch(()=>{});return()=>{live=false;controller.abort();};},[]);
- return <main>
+ const featured=campers.slice(0,3);
+  return <main>
   <Hero/>
   <section className={css.intro} aria-labelledby="welcome-title">
     <div className="ww-container">
@@ -20,7 +19,7 @@ export default function HomePage(){
   <section className={css.featured} aria-labelledby="featured-title">
     <div className="ww-container">
       <div className={css.featuredHead}><div><p className="ww-eyebrow">YOUR HOME ON THE ROAD</p><h2 id="featured-title" className="ww-serif">The collection, <em>curated.</em></h2></div><Link to="/catalog">Explore all campers <span aria-hidden="true">↗</span></Link></div>
-      {featured.length>0?<div className={css.featuredGrid}>{featured.map(camper=><Link key={camper.id} className={css.featuredCard} to={"/catalog/"+camper.id}><div className={css.featuredImage}><img src={camper.gallery?.[0]?.original} alt={camper.name} loading="lazy"/><span>DISCOVER THIS CAMPER ↗</span></div><div className={css.featuredCaption}><div><strong>{camper.name}</strong><p>{camper.location} · ★ {camper.rating}</p></div><span>€{Number(camper.price).toFixed(0)} <small>/ day</small></span></div></Link>)}</div>:<div className={css.featuredFallback}>Beautiful journeys begin here. <Link to="/catalog">Browse the camper collection ↗</Link></div>}
+      {featured.length>0?<div className={css.featuredGrid}>{featured.map(camper=><Link key={camper.id} className={css.featuredCard} to={"/catalog/"+camper.id}><div className={css.featuredImage}><img src={camper.gallery?.[0]?.original} alt={camper.name} loading="lazy" onError={handleCamperImageError}/><span>DISCOVER THIS CAMPER ↗</span></div><div className={css.featuredCaption}><div><strong>{camper.name}</strong><p>{camper.location} · ★ {camper.rating}</p></div><span>€{Number(camper.price).toFixed(0)} <small>/ day</small></span></div></Link>)}</div>:<div className={css.featuredFallback}>Beautiful journeys begin here. <Link to="/catalog">Browse the camper collection ↗</Link></div>}
     </div>
   </section>
   <section className={css.escapeSection} aria-labelledby="escape-title"><div className="ww-container"><div className={css.escapeHead}><div><p className="ww-eyebrow">TRAVEL YOUR WAY / THE INSPIRATION EDIT</p><h2 id="escape-title" className="ww-serif">What kind of <em>wanderer</em> are you?</h2></div><p>Choose the feeling. We will point you towards campers with features that fit your kind of escape.</p></div><div className={css.escapeGrid}>{[
