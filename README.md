@@ -41,3 +41,12 @@ The application uses the external demo API at `https://66b1f8e71ca8ad33d4f5f63e.
 This feature branch contains the portfolio modernization. Review and test it before merging into `main` and updating the deployed site. Original live demo may not yet display these changes.
 
 Designed and developed by [Mariia Otset](https://github.com/MariiaOtset).
+
+## V2 — compare campers and travel inspiration
+
+- Select up to three campers from catalog cards or detail pages and compare nightly prices (per day), vehicle type, guest rating and essential features side-by-side.
+- Selected comparisons persist in the current browser via localStorage; clear or remove campers at any time.
+- Browse campers from the homepage by travel style (compact van, comfort features or automatic transmission). Links use the existing catalog filter parameters.
+- The comparison is a discovery aid: prices are indicative and no live booking or availability is checked.
+
+**Branch workflow:** this V2 branch is based on the unmerged `feat/portfolio-redesign-v1` branch. Review V1 + V2 before merging to `main`.
