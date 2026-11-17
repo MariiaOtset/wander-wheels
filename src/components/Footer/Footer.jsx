@@ -6,6 +6,6 @@ export default function Footer(){
    <div><p className={css.eyebrow}>WANDER WHEELS / THE OPEN ROAD CLUB</p><h2>Go where you<br/><em>feel alive.</em></h2></div>
    <div className={css.right}><p>Beautiful journeys begin with a little curiosity. Discover your next home away from home.</p><Link to="/catalog">Explore campers <span aria-hidden="true">↗</span></Link></div>
  </div>
- <div className={css.bottom}><Link className={css.logo} to="/">✳ &nbsp; WANDER WHEELS</Link><div><Link to="/catalog">Our campers</Link><Link to="/favorites">Saved campers</Link></div><span>© {new Date().getFullYear()} Wander Wheels · Portfolio demonstration</span></div>
+ <div className={css.bottom}><Link className={css.logo} to="/">✳ &nbsp; WANDER WHEELS</Link><div><Link to="/catalog">Our campers</Link><Link to="/favorites">Saved campers</Link></div><span>© {new Date().getFullYear()} Wander Wheels</span></div>
  </footer>
 }
