@@ -34,7 +34,7 @@ export default function CatalogPage(){
  const clear=()=>{const next=new URLSearchParams();if(sort!=="featured")next.set("sort",sort);setParams(next);};
  const onSort=e=>{const next=new URLSearchParams(query);if(e.target.value==="featured")next.delete("sort");else next.set("sort",e.target.value);setParams(next);};
  return <main className={css.page}>
-  <div className={css.heading}><div><p className="ww-eyebrow">FIND YOUR FREEDOM</p><h1 className="ww-serif">A camper for <em>every journey.</em></h1><p>Find your favourite home on wheels. Explore the details, compare the essentials and make the next adventure yours.</p></div><span>THE COLLECTION / EXPLORE</span></div>
+  <div className={css.heading}><div><p className="ww-eyebrow">FIND YOUR FREEDOM</p><h1 className="ww-serif">A camper for <em>every journey.</em></h1><p>Find your favourite home on wheels. Explore 22 illustrated demo camper profiles, compare the essentials and plan a possible adventure. Vehicle details and prices are examples, not live rentals.</p></div><span>THE COLLECTION / EXPLORE</span></div>
   <div className={css.layout}>
    <aside className={css.filters} aria-label="Filter campers"><button type="button" className={css.filtersToggle} aria-expanded={filtersOpen} aria-controls="filter-content" onClick={()=>setFiltersOpen(o=>!o)}>Filters & preferences <span>{filtersOpen?"−":"+"}</span></button><div className={css.filterContent+(filtersOpen?" "+css.open:"")} id="filter-content"><div className={css.filterIntro}><h2>Make it yours</h2><p>Filter by your favourite features.</p></div><SearchForm/></div></aside>
    <section className={css.results} aria-label="Camper collection">

@@ -3,6 +3,7 @@ import {useSearchParams} from "react-router-dom";
 import {equipmentOptions,vehicleTypeOptions,searchParamsNames} from "../../constants/index.js";
 import {toCamelCase} from "../../utils/toCamelCase.js";
 import css from "./SearchForm.module.css";
+import {campers} from "../../data/campers.js";
 const queryName={"Shower":"bathroom","Automatic":"transmission","Petrol":"engine","AC":"AC","TV":"TV"};
 const paramName=name=>queryName[name]||name.toLowerCase();
 export default function SearchForm(){
@@ -20,7 +21,7 @@ export default function SearchForm(){
  return <Formik enableReinitialize initialValues={initialValues} onSubmit={submit}>
   {({resetForm,dirty})=><Form className={css.form}>
    <label className={css.locationLabel} htmlFor="location">Destination</label>
-   <Field className={css.location} name="location" placeholder="City or location" id="location"/>
+   <Field className={css.location} name="location" placeholder="City or location" id="location" list="camper-destinations"/><datalist id="camper-destinations">{[...new Set(campers.map(c=>c.location))].sort().map(location=><option key={location} value={location}/>)}</datalist>
    <div className={css.divider}/>
    <h3 className={css.sectionTitle}>Amenities</h3>
    <div className={css.equipment}>{equipmentOptions.map(option=><label key={option} className={css.option}><Field type="checkbox" name="equipment" value={option}/><span>{option}</span></label>)}</div>
