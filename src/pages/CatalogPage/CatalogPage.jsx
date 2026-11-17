@@ -5,6 +5,7 @@ import SearchForm from "../../components/SearchForm/SearchForm.jsx";
 import CampersList from "../../components/CampersList/CampersList.jsx";
 import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
+import CamperSkeleton from "../../components/CamperSkeleton/CamperSkeleton.jsx";
 import ErrorComponent from "../../components/ErrorComponent/ErrorComponent.jsx";
 import {fetchCampers} from "../../redux/campers/operations.js";
 import {resetItems} from "../../redux/campers/slice.js";
@@ -40,7 +41,7 @@ export default function CatalogPage(){
     <div className={css.toolbar}><div><span className={css.counter}>{total===null?"Explore the collection":total+" camper"+(total===1?"":"s")+" to explore"}</span><h2>Explore available campers</h2></div><label className={css.sort}>SORT BY <select aria-label="Sort campers" value={sort} onChange={onSort}>{sorts.map(s=><option key={s.value} value={s.value}>{s.label}</option>)}</select></label></div>
     {active.length>0&&<div className={css.activeFilters} aria-label="Active filters">{active.map(a=><button key={a.name} type="button" onClick={()=>removeTag(a.name)} title={"Remove "+a.label}>{a.label}{a.value!=="true"&&a.name!=="transmission"&&a.name!=="engine"?": "+a.value:""} <span aria-hidden="true">×</span></button>)}<button className={css.clear} onClick={clear} type="button">Clear all</button></div>}
     <CampersList/>
-    {loading&&<div className={css.loading}><Loader/></div>}
+    {loading&&<div className={css.loading}>{total===null?<CamperSkeleton count={3}/>:<Loader/>}</div>}
     {!loading&&error&&<ErrorComponent/>}
     {!loading&&!error&&total===0&&<div className={css.empty}><span aria-hidden="true">⌕</span><h3>No campers match these filters</h3><p>Try a different city, vehicle type, or fewer features.</p><button type="button" className="ww-btn" onClick={clear}>Clear filters</button></div>}
     {!loading&&!error&&hasMore&&<div className={css.more}><LoadMoreBtn onClick={()=>setPageState(s=>({...s,number:s.number+1}))}/></div>}

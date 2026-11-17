@@ -11,6 +11,7 @@ import FeaturesSection from "../../components/FeaturesSection/FeaturesSection.js
 import ReviewsSection from "../../components/ReviewsSection/ReviewsSection.jsx";
 import ReservationFormSection from "../../components/ReservationFormSection/ReservationFormSection.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
+import CamperSkeleton from "../../components/CamperSkeleton/CamperSkeleton.jsx";
 import css from "./CamperDetailsPage.module.css";
 export default function CamperDetailsPage(){
  const {id}=useParams(),dispatch=useDispatch(),camper=useSelector(selectCamper),loading=useSelector(selectLoading),error=useSelector(selectError),notFound=useSelector(selectNotFound);
@@ -18,7 +19,7 @@ export default function CamperDetailsPage(){
  const [tab,setTab]=useState("features");
  useEffect(()=>{dispatch(resetSelectedCamper());const request=dispatch(fetchCamperById(id));setTab("features");return()=>request.abort();},[id,dispatch]);
  const isFavorite=camper&&favorites.some(f=>f.id===camper.id);
- if(loading||(!camper&&!error&&!notFound))return <div className={css.status}><Loader/></div>;
+ if(loading||(!camper&&!error&&!notFound))return <div className={css.status}><CamperSkeleton count={1}/><Loader/></div>;
  if(error||notFound||!camper)return <div className={css.status}><h2>We could not find this camper.</h2><Link to="/catalog">Back to the collection ↗</Link></div>;
  return <main className={css.page}>
   <nav className={css.breadcrumb} aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/catalog">Our campers</Link><span>/</span><strong>{camper.name}</strong></nav>
