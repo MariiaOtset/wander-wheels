@@ -19,7 +19,7 @@ export default function CamperDetailsPage(){
  useEffect(()=>{dispatch(resetSelectedCamper());const request=dispatch(fetchCamperById(id));setTab("features");return()=>request.abort();},[id,dispatch]);
  const isFavorite=camper&&favorites.some(f=>f.id===camper.id);
  if(loading||(!camper&&!error&&!notFound))return <div className={css.status}><Loader/></div>;
- if(error||notFound||!camper)return <div className={css.status}><h2>We couldn't find this camper.</h2><Link to="/catalog">Back to the collection ↗</Link></div>;
+ if(error||notFound||!camper)return <div className={css.status}><h2>We could not find this camper.</h2><Link to="/catalog">Back to the collection ↗</Link></div>;
  return <main className={css.page}>
   <nav className={css.breadcrumb} aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/catalog">Our campers</Link><span>/</span><strong>{camper.name}</strong></nav>
   <div className={css.heading}><div><p className="ww-eyebrow">MEET YOUR NEXT HOME ON THE ROAD</p><h1 className="ww-serif">{camper.name}</h1><div className={css.metadata}><span>★ {camper.rating} · {camper.reviews?.length||0} reviews</span><span>⌖ {camper.location}</span></div></div><div className={css.headActions}><button type="button" onClick={()=>dispatch(setFavorite(camper))} aria-pressed={!!isFavorite}>{isFavorite?"♥ Saved to favourites":"♡ Save this camper"}</button><strong>€{Number(camper.price).toFixed(0)} <small>/ day</small></strong></div></div>
