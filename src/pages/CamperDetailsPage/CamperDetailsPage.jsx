@@ -13,9 +13,11 @@ import ReservationFormSection from "../../components/ReservationFormSection/Rese
 import Loader from "../../components/Loader/Loader.jsx";
 import CamperSkeleton from "../../components/CamperSkeleton/CamperSkeleton.jsx";
 import css from "./CamperDetailsPage.module.css";
+import {useCompare} from "../../context/useCompare.js";
 export default function CamperDetailsPage(){
  const {id}=useParams(),dispatch=useDispatch(),camper=useSelector(selectCamper),loading=useSelector(selectLoading),error=useSelector(selectError),notFound=useSelector(selectNotFound);
  const favorites=useSelector(selectFavorites);
+ const {selected,toggle,contains}=useCompare();
  const [tab,setTab]=useState("features");
  useEffect(()=>{dispatch(resetSelectedCamper());const request=dispatch(fetchCamperById(id));setTab("features");return()=>request.abort();},[id,dispatch]);
  const isFavorite=camper&&favorites.some(f=>f.id===camper.id);
@@ -23,7 +25,7 @@ export default function CamperDetailsPage(){
  if(error||notFound||!camper)return <div className={css.status}><h2>We could not find this camper.</h2><Link to="/catalog">Back to the collection ↗</Link></div>;
  return <main className={css.page}>
   <nav className={css.breadcrumb} aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/catalog">Our campers</Link><span>/</span><strong>{camper.name}</strong></nav>
-  <div className={css.heading}><div><p className="ww-eyebrow">MEET YOUR NEXT HOME ON THE ROAD</p><h1 className="ww-serif">{camper.name}</h1><div className={css.metadata}><span>★ {camper.rating} · {camper.reviews?.length||0} reviews</span><span>⌖ {camper.location}</span></div></div><div className={css.headActions}><button type="button" onClick={()=>dispatch(setFavorite(camper))} aria-pressed={!!isFavorite}>{isFavorite?"♥ Saved to favourites":"♡ Save this camper"}</button><strong>€{Number(camper.price).toFixed(0)} <small>/ day</small></strong></div></div>
+  <div className={css.heading}><div><p className="ww-eyebrow">MEET YOUR NEXT HOME ON THE ROAD</p><h1 className="ww-serif">{camper.name}</h1><div className={css.metadata}><span>★ {camper.rating} · {camper.reviews?.length||0} reviews</span><span>⌖ {camper.location}</span></div></div><div className={css.headActions}><button type="button" onClick={()=>dispatch(setFavorite(camper))} aria-pressed={!!isFavorite}>{isFavorite?"♥ Saved to favourites":"♡ Save this camper"}</button><button type="button" aria-pressed={contains(camper.id)} disabled={selected.length>=3&&!contains(camper.id)} onClick={()=>toggle(camper)}>{contains(camper.id)?"✓ In comparison":"+ Compare this camper"}</button><strong>€{Number(camper.price).toFixed(0)} <small>/ day</small></strong></div></div>
   <Gallery camper={camper}/>
   <div className={css.content}><section className={css.primary}><div className={css.intro}><p className="ww-eyebrow">ABOUT THIS CAMPER</p><h2 className="ww-serif">A little more <em>freedom.</em></h2><p>{camper.description}</p></div><div className={css.tabs} role="tablist" aria-label="Camper information"><button type="button" role="tab" aria-selected={tab==="features"} onClick={()=>setTab("features")} className={tab==="features"?css.selected:""}>Features & details</button><button type="button" role="tab" aria-selected={tab==="reviews"} onClick={()=>setTab("reviews")} className={tab==="reviews"?css.selected:""}>Guest reviews ({camper.reviews?.length||0})</button></div><div className={css.tabPanel} role="tabpanel">{tab==="features"?<FeaturesSection/>:<ReviewsSection/>}</div></section><ReservationFormSection camper={camper}/></div>
   <div className={css.back}><Link to="/catalog">← Back to all campers</Link></div>
