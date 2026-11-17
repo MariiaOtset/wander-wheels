@@ -1,4 +1,4 @@
-import {useEffect,useMemo,useState} from "react";
+import {useEffect,useMemo,useRef,useState} from "react";
 import {useDispatch,useSelector} from "react-redux";
 import {useSearchParams} from "react-router-dom";
 import SearchForm from "../../components/SearchForm/SearchForm.jsx";
@@ -19,6 +19,7 @@ export default function CatalogPage(){
  const key=params.toString();
  const [pageState,setPageState]=useState({key,number:1});
  const [filtersOpen,setFiltersOpen]=useState(false);
+ const resultsRef=useRef(null);
  const dispatch=useDispatch();
  const loading=useSelector(selectLoading),error=useSelector(selectError),total=useSelector(selectTotal),hasMore=useSelector(selectShownMoreBtn);
  const query=useMemo(()=>new URLSearchParams(key),[key]);
@@ -33,11 +34,19 @@ export default function CatalogPage(){
  const removeTag=name=>{const next=new URLSearchParams(query);next.delete(name);setParams(next);};
  const clear=()=>{const next=new URLSearchParams();if(sort!=="featured")next.set("sort",sort);setParams(next);};
  const onSort=e=>{const next=new URLSearchParams(query);if(e.target.value==="featured")next.delete("sort");else next.set("sort",e.target.value);setParams(next);};
+ const onApplyFilters=()=>{
+  setFiltersOpen(false);
+  // Wait for the mobile filter accordion to collapse before measuring the results.
+  window.requestAnimationFrame(()=>window.requestAnimationFrame(()=>{
+   const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+   resultsRef.current?.scrollIntoView({behavior:reducedMotion?"auto":"smooth",block:"start"});
+  }));
+ };
  return <main className={css.page}>
   <div className={css.heading}><div><p className="ww-eyebrow">FIND YOUR FREEDOM</p><h1 className="ww-serif">A camper for <em>every journey.</em></h1><p>From spontaneous weekend escapes to the scenic route across the country, find a camper that feels like yours. Explore the collection, compare favourite features and start dreaming up your next adventure.</p></div><span>THE COLLECTION / EXPLORE</span></div>
   <div className={css.layout}>
-   <aside className={css.filters} aria-label="Filter campers"><button type="button" className={css.filtersToggle} aria-expanded={filtersOpen} aria-controls="filter-content" onClick={()=>setFiltersOpen(o=>!o)}>Filters & preferences <span>{filtersOpen?"−":"+"}</span></button><div className={css.filterContent+(filtersOpen?" "+css.open:"")} id="filter-content"><div className={css.filterIntro}><h2>Make it yours</h2><p>Filter by your favourite features.</p></div><SearchForm/></div></aside>
-   <section className={css.results} aria-label="Camper collection">
+   <aside className={css.filters} aria-label="Filter campers"><button type="button" className={css.filtersToggle} aria-expanded={filtersOpen} aria-controls="filter-content" onClick={()=>setFiltersOpen(o=>!o)}>Filters & preferences <span>{filtersOpen?"−":"+"}</span></button><div className={css.filterContent+(filtersOpen?" "+css.open:"")} id="filter-content"><div className={css.filterIntro}><h2>Make it yours</h2><p>Filter by your favourite features.</p></div><SearchForm onApply={onApplyFilters}/></div></aside>
+   <section ref={resultsRef} id="camper-results" className={css.results} aria-label="Camper collection">
     <div className={css.toolbar}><div><span className={css.counter}>{total===null?"Explore the collection":total+" camper"+(total===1?"":"s")+" to explore"}</span><h2>Explore our campers</h2></div><label className={css.sort}>SORT BY <select aria-label="Sort campers" value={sort} onChange={onSort}>{sorts.map(s=><option key={s.value} value={s.value}>{s.label}</option>)}</select></label></div>
     {active.length>0&&<div className={css.activeFilters} aria-label="Active filters">{active.map(a=><button key={a.name} type="button" onClick={()=>removeTag(a.name)} title={"Remove "+a.label}>{a.label}{a.value!=="true"&&a.name!=="transmission"&&a.name!=="engine"?": "+a.value:""} <span aria-hidden="true">×</span></button>)}<button className={css.clear} onClick={clear} type="button">Clear all</button></div>}
     <CampersList/>

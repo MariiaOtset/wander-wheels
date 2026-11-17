@@ -1,6 +1,6 @@
-/** Bundled demo inventory: the original 13 GoIT camper fixtures plus 9 curated variations.
- * Vehicle specs, locations, prices, reviews and photography are illustrative; not bookable stock.
- * Stable local data keeps the app usable when third-party MockAPI is unavailable.
+/** Wander Wheels demonstration inventory.
+ * All review names/notes are invented examples; never represent them as verified customers.
+ * Camper specifications, pricing and gallery images are sample content for browsing.
  */
 export const campers = [
   {
@@ -19,7 +19,7 @@ export const campers = [
     "height": "3.65m",
     "tank": "208l",
     "consumption": "30l/100km",
-    "description": "Road Bear C 23-25 offers A generous family-ready layout with room to settle in after long days on the road. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Road Bear C 23-25 offers a generous family-ready layout with room to settle in after long days on the road. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": true,
     "kitchen": false,
@@ -45,9 +45,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Alex M.",
         "reviewer_rating": 5,
-        "comment": "Illustrative review: a comfortable family camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "Comfortable proportions and a practical setup for winding roads. The family-friendly layout is a real highlight."
+      },
+      {
+        "reviewer_name": "Sophie L.",
+        "reviewer_rating": 4,
+        "comment": "A simple interior keeps everything focused on the journey. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Jamie R.",
+        "reviewer_rating": 5,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Taylor K.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Kyiv. Manual transmission suits drivers who like more control. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Morgan D.",
+        "reviewer_rating": 4,
+        "comment": "A flexible arrangement that works beautifully for family trips. The entertainment setup is handy in the evenings."
       }
     ]
   },
@@ -67,7 +87,7 @@ export const campers = [
     "height": "3.72m",
     "tank": "151l",
     "consumption": "21l/100km",
-    "description": "Cruise America C-21 offers A generous family-ready layout with room to settle in after long days on the road. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Cruise America C-21 offers a generous family-ready layout with room to settle in after long days on the road. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": false,
     "bathroom": true,
     "kitchen": true,
@@ -93,9 +113,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Taylor K.",
+        "reviewer_rating": 5,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Morgan D.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable family camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "The shower adds everyday convenience for longer stays. The cabin has a relaxed, back-to-basics feel."
+      },
+      {
+        "reviewer_name": "Casey P.",
+        "reviewer_rating": 5,
+        "comment": "A lovely match for exploring around Poltava. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Emilia S.",
+        "reviewer_rating": 4,
+        "comment": "A flexible arrangement that works beautifully for family trips. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Noah T.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The family-friendly layout is a real highlight."
       }
     ]
   },
@@ -115,7 +155,7 @@ export const campers = [
     "height": "3.65m",
     "tank": "208l",
     "consumption": "30l/100km",
-    "description": "Britz 4 Berth offers A generous family-ready layout with room to settle in after long days on the road. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Britz 4 Berth offers a generous family-ready layout with room to settle in after long days on the road. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": false,
     "kitchen": true,
@@ -141,9 +181,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Emilia S.",
+        "reviewer_rating": 5,
+        "comment": "Perfect for a more pared-back, weekend-focused escape. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Noah T.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable family camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "A lovely match for exploring around Dnipro. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Ava H.",
+        "reviewer_rating": 5,
+        "comment": "A flexible arrangement that works beautifully for family trips. The entertainment setup is handy in the evenings."
+      },
+      {
+        "reviewer_name": "Riley B.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The family-friendly layout is a real highlight."
+      },
+      {
+        "reviewer_name": "Theo C.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
       }
     ]
   },
@@ -163,7 +223,7 @@ export const campers = [
     "height": "3.65m",
     "tank": "208l",
     "consumption": "25l/100km",
-    "description": "Mighty Class C Large [MT] offers A generous family-ready layout with room to settle in after long days on the road. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Mighty Class C Large [MT] offers a generous family-ready layout with room to settle in after long days on the road. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": false,
     "bathroom": true,
     "kitchen": true,
@@ -189,9 +249,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Riley B.",
+        "reviewer_rating": 5,
+        "comment": "A lovely match for exploring around Odesa. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Theo C.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable family camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "A flexible arrangement that works beautifully for family trips. The entertainment setup is handy in the evenings."
+      },
+      {
+        "reviewer_name": "Sam W.",
+        "reviewer_rating": 5,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The family-friendly layout is a real highlight."
+      },
+      {
+        "reviewer_name": "Harper J.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Mila N.",
+        "reviewer_rating": 4,
+        "comment": "The shower adds everyday convenience for longer stays. The cabin has a relaxed, back-to-basics feel."
       }
     ]
   },
@@ -211,7 +291,7 @@ export const campers = [
     "height": "3.4m",
     "tank": "208l",
     "consumption": "25l/100km",
-    "description": "El Monte Class C Small [C] offers A generous family-ready layout with room to settle in after long days on the road. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "El Monte Class C Small [C] offers a generous family-ready layout with room to settle in after long days on the road. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": true,
     "kitchen": true,
@@ -237,9 +317,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Harper J.",
+        "reviewer_rating": 5,
+        "comment": "A flexible arrangement that works beautifully for family trips. The entertainment setup is handy in the evenings."
+      },
+      {
+        "reviewer_name": "Mila N.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable family camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "Comfortable proportions and a practical setup for winding roads. The family-friendly layout is a real highlight."
+      },
+      {
+        "reviewer_name": "Elliot F.",
+        "reviewer_rating": 5,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Leah V.",
+        "reviewer_rating": 4,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Finn D.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Odesa. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
       }
     ]
   },
@@ -259,7 +359,7 @@ export const campers = [
     "height": "3.95m",
     "tank": "302l",
     "consumption": "38l/100km",
-    "description": "Road Bear A 30-32 offers A spacious motorhome built for relaxed long-distance road trips and comfortable overnight stays. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Road Bear A 30-32 offers a spacious motorhome built for relaxed long-distance road trips and comfortable overnight stays. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": true,
     "kitchen": true,
@@ -285,9 +385,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Leah V.",
+        "reviewer_rating": 5,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Finn D.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable motorhome for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Nina P.",
+        "reviewer_rating": 5,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Robin E.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Kharkiv. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Oliver G.",
+        "reviewer_rating": 4,
+        "comment": "Generous room to unwind after a day of exploring. The entertainment setup is handy in the evenings."
       }
     ]
   },
@@ -307,7 +427,7 @@ export const campers = [
     "height": "4m",
     "tank": "302l",
     "consumption": "33l/100km",
-    "description": "El Monte Class A Family Sleeper [AF] offers A spacious motorhome built for relaxed long-distance road trips and comfortable overnight stays. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "El Monte Class A Family Sleeper [AF] offers a spacious motorhome built for relaxed long-distance road trips and comfortable overnight stays. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": true,
     "kitchen": true,
@@ -333,9 +453,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Robin E.",
+        "reviewer_rating": 5,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Oliver G.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable motorhome for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Alex M.",
+        "reviewer_rating": 5,
+        "comment": "A lovely match for exploring around Sumy. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Sophie L.",
+        "reviewer_rating": 4,
+        "comment": "Generous room to unwind after a day of exploring. The entertainment setup is handy in the evenings."
+      },
+      {
+        "reviewer_name": "Jamie R.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
       }
     ]
   },
@@ -355,7 +495,7 @@ export const campers = [
     "height": "2.05m",
     "tank": "132l",
     "consumption": "12.4l/100km",
-    "description": "Mavericks offers A nimble camper for slow travel, quiet detours and compact living on the move. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Mavericks offers a nimble camper for slow travel, quiet detours and compact living on the move. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": false,
     "kitchen": true,
@@ -381,9 +521,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Sophie L.",
+        "reviewer_rating": 5,
+        "comment": "Perfect for a more pared-back, weekend-focused escape. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Jamie R.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable compact camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "A lovely match for exploring around Lviv. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Taylor K.",
+        "reviewer_rating": 5,
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Morgan D.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Casey P.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. The layout feels straightforward and unfussy."
       }
     ]
   },
@@ -403,7 +563,7 @@ export const campers = [
     "height": "1.85m",
     "tank": "60l",
     "consumption": "8.7l/100km",
-    "description": "Santa Cruz offers A nimble camper for slow travel, quiet detours and compact living on the move. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Santa Cruz offers a nimble camper for slow travel, quiet detours and compact living on the move. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": false,
     "kitchen": true,
@@ -429,9 +589,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Morgan D.",
+        "reviewer_rating": 5,
+        "comment": "A lovely match for exploring around Lviv. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Casey P.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable compact camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Emilia S.",
+        "reviewer_rating": 5,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Noah T.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. The layout feels straightforward and unfussy."
+      },
+      {
+        "reviewer_name": "Ava H.",
+        "reviewer_rating": 4,
+        "comment": "Perfect for a more pared-back, weekend-focused escape. Air conditioning is a thoughtful touch."
       }
     ]
   },
@@ -451,7 +631,7 @@ export const campers = [
     "height": "2.3m",
     "tank": "94l",
     "consumption": "12.4l/100km",
-    "description": "Mesa offers A nimble camper for slow travel, quiet detours and compact living on the move. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Mesa offers a nimble camper for slow travel, quiet detours and compact living on the move. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": false,
     "kitchen": true,
@@ -477,9 +657,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Noah T.",
+        "reviewer_rating": 5,
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Ava H.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable compact camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Riley B.",
+        "reviewer_rating": 5,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. The layout feels straightforward and unfussy."
+      },
+      {
+        "reviewer_name": "Theo C.",
+        "reviewer_rating": 4,
+        "comment": "Perfect for a more pared-back, weekend-focused escape. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Sam W.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Kyiv. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
       }
     ]
   },
@@ -499,7 +699,7 @@ export const campers = [
     "height": "3.1m",
     "tank": "117l",
     "consumption": "15l/100km",
-    "description": "Kuga Camper offers A nimble camper for slow travel, quiet detours and compact living on the move. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "Kuga Camper offers a nimble camper for slow travel, quiet detours and compact living on the move. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": false,
     "kitchen": true,
@@ -525,9 +725,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Theo C.",
+        "reviewer_rating": 5,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Sam W.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable compact camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "The kitchen area makes easy meals on the road feel achievable. The layout feels straightforward and unfussy."
+      },
+      {
+        "reviewer_name": "Harper J.",
+        "reviewer_rating": 5,
+        "comment": "Perfect for a more pared-back, weekend-focused escape. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Mila N.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Kyiv. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Elliot F.",
+        "reviewer_rating": 4,
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
       }
     ]
   },
@@ -547,7 +767,7 @@ export const campers = [
     "height": "3.1m",
     "tank": "117l",
     "consumption": "14l/100km",
-    "description": "HI-Top Camper offers A nimble camper for slow travel, quiet detours and compact living on the move. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "HI-Top Camper offers a nimble camper for slow travel, quiet detours and compact living on the move. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": false,
     "kitchen": true,
@@ -573,9 +793,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Mila N.",
+        "reviewer_rating": 5,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. The layout feels straightforward and unfussy."
+      },
+      {
+        "reviewer_name": "Elliot F.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable compact camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "Perfect for a more pared-back, weekend-focused escape. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Leah V.",
+        "reviewer_rating": 5,
+        "comment": "A lovely match for exploring around Odesa. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Finn D.",
+        "reviewer_rating": 4,
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Nina P.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
       }
     ]
   },
@@ -595,7 +835,7 @@ export const campers = [
     "height": "2.87m",
     "tank": "117l",
     "consumption": "14l/100km",
-    "description": "El Monte Class B Small [B] offers A nimble camper for slow travel, quiet detours and compact living on the move. Browse its travel essentials, compare features, and sketch out your own route.",
+    "description": "El Monte Class B Small [B] offers a nimble camper for slow travel, quiet detours and compact living on the move. Thoughtful essentials make it easy to imagine your next stop.",
     "AC": true,
     "bathroom": true,
     "kitchen": true,
@@ -621,9 +861,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Finn D.",
+        "reviewer_rating": 5,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Nina P.",
         "reviewer_rating": 4,
-        "comment": "Illustrative review: a comfortable compact camper for scenic trips, with a practical layout and thoughtful essentials."
+        "comment": "A lovely match for exploring around Odesa. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Robin E.",
+        "reviewer_rating": 5,
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Oliver G.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Alex M.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
       }
     ]
   },
@@ -669,9 +929,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Oliver G.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "A lovely match for exploring around Salzburg. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Alex M.",
+        "reviewer_rating": 4,
+        "comment": "A calm, clever use of a smaller footprint. The entertainment setup is handy in the evenings."
+      },
+      {
+        "reviewer_name": "Sophie L.",
+        "reviewer_rating": 5,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The compact size is a real highlight."
+      },
+      {
+        "reviewer_name": "Jamie R.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Taylor K.",
+        "reviewer_rating": 4,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
       }
     ]
   },
@@ -717,9 +997,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Jamie R.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Taylor K.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The compact size is a real highlight."
+      },
+      {
+        "reviewer_name": "Morgan D.",
+        "reviewer_rating": 5,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Casey P.",
+        "reviewer_rating": 4,
+        "comment": "Perfect for a more pared-back, weekend-focused escape. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Emilia S.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Porto. Manual transmission suits drivers who like more control. The finishing touches feel considered."
       }
     ]
   },
@@ -765,9 +1065,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Casey P.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Emilia S.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Noah T.",
+        "reviewer_rating": 5,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Ava H.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Bergen. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Riley B.",
+        "reviewer_rating": 4,
+        "comment": "A calm, clever use of a smaller footprint. The entertainment setup is handy in the evenings."
       }
     ]
   },
@@ -813,9 +1133,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Ava H.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Riley B.",
+        "reviewer_rating": 4,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Theo C.",
+        "reviewer_rating": 5,
+        "comment": "A lovely match for exploring around Verona. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Sam W.",
+        "reviewer_rating": 4,
+        "comment": "A flexible arrangement that works beautifully for family trips. The entertainment setup is handy in the evenings."
+      },
+      {
+        "reviewer_name": "Harper J.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The family-friendly layout is a real highlight."
       }
     ]
   },
@@ -861,9 +1201,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Sam W.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Harper J.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Geneva. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Mila N.",
+        "reviewer_rating": 5,
+        "comment": "Generous room to unwind after a day of exploring. The entertainment setup is handy in the evenings."
+      },
+      {
+        "reviewer_name": "Elliot F.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Leah V.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
       }
     ]
   },
@@ -909,9 +1269,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Elliot F.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "A lovely match for exploring around Lisbon. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Leah V.",
+        "reviewer_rating": 4,
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Finn D.",
+        "reviewer_rating": 5,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The compact size is a real highlight."
+      },
+      {
+        "reviewer_name": "Nina P.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Robin E.",
+        "reviewer_rating": 4,
+        "comment": "Perfect for a more pared-back, weekend-focused escape. Air conditioning is a thoughtful touch."
       }
     ]
   },
@@ -957,9 +1337,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Nina P.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "A calm, clever use of a smaller footprint. The open-road feeling is the real draw."
+      },
+      {
+        "reviewer_name": "Robin E.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Oliver G.",
+        "reviewer_rating": 5,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. The layout feels straightforward and unfussy."
+      },
+      {
+        "reviewer_name": "Alex M.",
+        "reviewer_rating": 4,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Sophie L.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Ljubljana. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
       }
     ]
   },
@@ -1005,9 +1405,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Alex M.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "Comfortable proportions and a practical setup for winding roads. The open living area is a real highlight."
+      },
+      {
+        "reviewer_name": "Sophie L.",
+        "reviewer_rating": 4,
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Jamie R.",
+        "reviewer_rating": 5,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Taylor K.",
+        "reviewer_rating": 4,
+        "comment": "A lovely match for exploring around Bled. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Morgan D.",
+        "reviewer_rating": 4,
+        "comment": "Generous room to unwind after a day of exploring. The entertainment setup is handy in the evenings."
       }
     ]
   },
@@ -1053,9 +1473,29 @@ export const campers = [
     ],
     "reviews": [
       {
-        "reviewer_name": "Sample guest",
+        "reviewer_name": "Taylor K.",
         "reviewer_rating": 5,
-        "comment": "Illustrative guest feedback: the layout feels easy to live in, with handy features for a relaxed road trip."
+        "comment": "The kitchen area makes easy meals on the road feel achievable. Having a fridge is a welcome detail."
+      },
+      {
+        "reviewer_name": "Morgan D.",
+        "reviewer_rating": 4,
+        "comment": "The shower adds everyday convenience for longer stays. Air conditioning is a thoughtful touch."
+      },
+      {
+        "reviewer_name": "Casey P.",
+        "reviewer_rating": 5,
+        "comment": "A lovely match for exploring around Nice. Automatic transmission makes the journey feel easy. The finishing touches feel considered."
+      },
+      {
+        "reviewer_name": "Emilia S.",
+        "reviewer_rating": 4,
+        "comment": "A flexible arrangement that works beautifully for family trips. The entertainment setup is handy in the evenings."
+      },
+      {
+        "reviewer_name": "Noah T.",
+        "reviewer_rating": 4,
+        "comment": "Comfortable proportions and a practical setup for winding roads. The family-friendly layout is a real highlight."
       }
     ]
   }

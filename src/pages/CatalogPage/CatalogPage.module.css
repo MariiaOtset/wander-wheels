@@ -21,3 +21,27 @@
 @media(max-width:930px){
  .heading h1{white-space:normal;font-size:clamp(43px,6.2vw,65px);overflow-wrap:normal}
 }
+
+/* Scroll the filter panel independently on desktop, including the apply button. */
+.results{scroll-margin-top:100px}
+@media(min-width:931px){
+ .filters{
+  position:sticky;
+  top:100px;
+  max-height:calc(100dvh - 116px);
+  min-height:0;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:#b8cab9 #eef2eb;
+  padding:22px 21px;
+ }
+ .filters::-webkit-scrollbar{width:7px}
+ .filters::-webkit-scrollbar-track{background:#eef2eb;border-radius:10px}
+ .filters::-webkit-scrollbar-thumb{background:#b8cab9;border-radius:10px}
+ .filterContent{min-width:0}
+}
+@media(max-width:930px){
+ .filters{max-height:none;overflow:visible}
+ .results{scroll-margin-top:89px}
+}

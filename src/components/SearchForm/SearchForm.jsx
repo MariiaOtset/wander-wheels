@@ -6,7 +6,7 @@ import css from "./SearchForm.module.css";
 import {campers} from "../../data/campers.js";
 const queryName={"Shower":"bathroom","Automatic":"transmission","Petrol":"engine","AC":"AC","TV":"TV"};
 const paramName=name=>queryName[name]||name.toLowerCase();
-export default function SearchForm(){
+export default function SearchForm({onApply}){
  const [params,setParams]=useSearchParams();
  const selectedEquipment=equipmentOptions.filter(option=>{const value=params.get(paramName(option));return option==="Automatic"?value==="automatic":option==="Petrol"?value==="petrol":value==="true";});
  const initialValues={equipment:selectedEquipment,vehicleType:vehicleTypeOptions.find(type=>toCamelCase(type)===params.get("form"))||"",location:params.get("location")||""};
@@ -17,6 +17,7 @@ export default function SearchForm(){
   if(vehicleType)next.set("form",toCamelCase(vehicleType));
   if(location.trim())next.set("location",location.trim());
   setParams(next);
+  onApply?.();
  };
  return <Formik enableReinitialize initialValues={initialValues} onSubmit={submit}>
   {({resetForm,dirty})=><Form className={css.form}>

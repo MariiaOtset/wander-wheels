@@ -50,3 +50,15 @@ test("pagination and sorting are consistent",()=>{
  assert.ok(low.every((c,i)=>i===0||low[i-1].price<=c.price));
  assert.ok(high.every((c,i)=>i===0||high[i-1].rating>=c.rating));
 });
+
+test("all camper pages have five distinct notes with no placeholder preamble",()=>{
+ for(const camper of campers){
+  assert.equal(camper.reviews.length,5,camper.name);
+  assert.equal(new Set(camper.reviews.map(review=>review.comment)).size,5,camper.name);
+  for(const review of camper.reviews){
+   assert.ok(review.reviewer_name.length>1);
+   assert.ok(review.reviewer_rating>=1&&review.reviewer_rating<=5);
+   assert.ok(!/Illustrative guest feedback|Illustrative review|Sample guest/i.test(review.comment),camper.name);
+  }
+ }
+});

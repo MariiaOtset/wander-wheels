@@ -1,2 +1,7 @@
 .wrapper{display:flex;align-items:start;justify-content:space-between;gap:12px;margin-bottom:13px}.title{color:#25453b;font-weight:700;line-height:1.2;letter-spacing:-.04em;font-size:clamp(19px,2vw,24px);margin:0 0 8px;overflow-wrap:anywhere}.subtitle{font-size:9px;letter-spacing:.14em;color:#9ba69b;font-weight:800}.priceWrapper{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#234339}.priceWrapper strong{font-size:18px}.priceWrapper span{font-size:10px;color:#8d998f}
 @media(max-width:1180px){.wrapper{flex-wrap:wrap}.priceWrapper{width:100%;justify-content:space-between}}@media(max-width:700px){.wrapper{flex-wrap:nowrap}.priceWrapper{width:auto}}@media(max-width:410px){.wrapper{flex-wrap:wrap}.priceWrapper{width:100%}}
+
+.priceWrapper{flex-shrink:0}
+@media(max-width:1180px) and (min-width:701px){.wrapper{flex-wrap:wrap;gap:5px}.priceWrapper{width:100%;justify-content:space-between}}
+@media(max-width:700px){.wrapper{flex-wrap:wrap;gap:9px}.priceWrapper{width:auto;margin-left:auto}}
+@media(max-width:460px){.wrapper{align-items:flex-start}.priceWrapper{width:100%;margin-left:0}}
