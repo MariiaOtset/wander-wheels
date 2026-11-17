@@ -1,19 +1,6 @@
 import css from "./FavoriteButton.module.css";
 import sprite from "../../images/sprite.svg";
 import clsx from "clsx";
-
-const FavoriteButton = ({ onClick, isFavorite }) => {
-    const favoriteClasses = clsx(css.heart, isFavorite && css.favorite);
-
-  return (
-      <div>
-          <button type="button" onClick={onClick} className={css.button}>
-        <svg className={favoriteClasses}>
-          <use href={`${sprite}#icon-heart`}/>
-        </svg>
-          </button>
-    </div>
-  );
-};
-
-export default FavoriteButton;
+export default function FavoriteButton({onClick,isFavorite}){
+ return <button type="button" aria-label={isFavorite?"Remove from saved campers":"Save camper"} aria-pressed={isFavorite} title={isFavorite?"Remove from saved campers":"Save camper"} className={css.button} onClick={onClick}><svg aria-hidden="true" className={clsx(css.heart,isFavorite&&css.favorite)}><use href={sprite+"#icon-heart"}/></svg></button>
+}

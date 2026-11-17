@@ -1,74 +1,43 @@
-# Travel Trucks
+# Wander Wheels
 
-Visit the live site: [Travel Trucks](https://wander-wheels-two.vercel.app/)
+A premium campervan discovery and trip-planning experience built with React. A portfolio demonstration of a travel rental interface, with a curated homepage, searchable vehicle catalog, immersive camper details, saved favourites and an illustrative booking calculator.
 
-## Contents
+**Live original:** https://wander-wheels-two.vercel.app/
 
-1. [Project Description](#project-description)
-2. [Installation](#installation)
-3. [Backend API](#backend-api)
-4. [Technologies](#technologies)
-5. [Author](#author)
+## Features
 
-## Project Description
+- Editorial travel homepage with a destination quick search and dynamically loaded featured campers
+- Filter campervans by location, vehicle type, and amenities
+- Sort results by price or rating, with active filter chips and pagination
+- Save campervans to a dedicated favourites page (Redux Persist, stored on this device)
+- Immersive camper detail view with keyboard-accessible image lightbox, features, and reviews
+- Select dates and calculate an estimated trip price using a no-payment demo planner
+- Fully responsive layout across mobile, tablet, and desktop
 
-Travel Trucks is a web-based platform designed to assist users in exploring and organizing travel destinations, trucking routes, and logistical planning. Whether you're a travel enthusiast or responsible for managing transportation routes, Travel Trucks offers a user-friendly interface for browsing, categorizing, and efficiently managing travel information.
+**Important:** Booking is a demonstration only. No reservation is created, no availability is checked, and no payment is processed. Vehicle data is provided by an external MockAPI endpoint.
 
-## Installation
+## Stack
 
-Clone the repository:
+React 18 · Vite · React Router · Redux Toolkit · Redux Persist · Axios · Formik · Yup · CSS Modules
 
-```bash
-git clone https://github.com/MariiaOtset/wander-wheels
-```
-
-Install the dependencies:
+## Run locally
 
 ```bash
-npm install
-```
-
-```bash
+npm ci
 npm run dev
 ```
 
-The app will be available at http://localhost:5173.
-
-## Backend API
-
-Travel Trucks utilizes a mock API hosted at https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers
-to manage data related to travel routes. Below are the available endpoints for interacting with the backend:
-
-Endpoints:
-
-### GET /campers
-
-Fetches a complete list of all campers. This endpoint returns all tracks available based on the filters applied.
-
-Example Request:
+To verify the production bundle:
 
 ```bash
-GET https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers
+npm run build
+npm run lint
 ```
 
-### GET /campers/:id
+The application uses the external demo API at `https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers`. API availability and sorting support depend on that service.
 
-Fetches information about a certain camper by its ID.
+## Portfolio notes
 
-Example Request:
+This feature branch contains the portfolio modernization. Review and test it before merging into `main` and updating the deployed site. Original live demo may not yet display these changes.
 
-```bash
-GET https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers/3
-```
-
-## Technologies
-
-- Frontend: js, React, Redux
-- Backend API: MockAPI (https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers)
-- Hosting: Vercel
-- Styling: Module CSS
-- Database: MockAPI (for demo purposes)
-
-## Author
-
-Mariia Otset - Developer - [GitHub](https://github.com/MariiaOtset)
+Designed and developed by [Mariia Otset](https://github.com/MariiaOtset).

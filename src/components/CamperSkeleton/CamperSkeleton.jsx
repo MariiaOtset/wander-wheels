@@ -1,0 +1,2 @@
+import css from "./CamperSkeleton.module.css";
+export default function CamperSkeleton({count=3}){return <div className={css.list} role="status" aria-label="Loading campers">{Array.from({length:count},(_,i)=><div className={css.card} key={i}><div className={css.image}/><div className={css.copy}><div className={css.head}/><div className={css.text}/><div className={css.text}/><div className={css.pills}><span/><span/><span/></div></div></div>)}</div>;}

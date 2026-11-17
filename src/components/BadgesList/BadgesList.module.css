@@ -1,7 +1,1 @@
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  overflow: hidden;
-  margin-bottom: 24px;
-}
+.wrapper{display:flex;flex-wrap:wrap;gap:6px;margin:0}
