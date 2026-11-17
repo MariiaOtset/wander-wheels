@@ -1,2 +1,23 @@
 .page{width:min(100% - 64px,1320px);margin:auto;padding:69px 0 65px;min-height:80vh}.heading{display:flex;justify-content:space-between;align-items:flex-end;gap:35px;padding-bottom:58px}.heading>div{max-width:860px}.heading h1{font-size:clamp(49px,5.9vw,83px);line-height:1.05;letter-spacing:-.04em;color:#193d36;margin:17px 0 20px}.heading h1 em{color:#ae795c;font-weight:400}.heading>div>p:last-child{max-width:570px;color:#718073;line-height:1.75;font-size:15px}.heading>span{font-size:10px;letter-spacing:.19em;color:#8a998e;white-space:nowrap}.layout{display:grid;grid-template-columns:295px minmax(0,1fr);align-items:start;gap:48px}.filters{position:sticky;top:108px;padding:28px;background:#f0f2ed;border:1px solid #e2e7de;border-radius:17px}.filterIntro{padding-bottom:21px;border-bottom:1px solid #dce3d8;margin-bottom:20px}.filterIntro h2{font-family:var(--serif);font-size:31px;color:#26483e;font-weight:400}.filterIntro p{font-size:12px;color:#7d8c7d;margin-top:5px}.filtersToggle{display:none}.results{min-width:0}.toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:25px;padding-bottom:25px;border-bottom:1px solid #e2e9df;margin-bottom:26px}.counter{display:block;font-size:11px;letter-spacing:.13em;color:#bd7656;text-transform:uppercase;font-weight:800;margin-bottom:7px}.toolbar h2{font-family:var(--serif);font-size:30px;font-weight:400;color:#204237}.sort{display:flex;flex-direction:column;gap:7px;color:#768b79;letter-spacing:.12em;font-size:10px;font-weight:800;white-space:nowrap}.sort select{padding:11px 32px 11px 13px;background:#fff;border:1px solid #dbe5d9;border-radius:8px;color:#254037;max-width:210px;letter-spacing:0;font-weight:700;font-size:12px}.activeFilters{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:-3px 0 22px}.activeFilters button{display:flex;gap:10px;align-items:center;background:#e8eee6;color:#305245;border:1px solid #d4e0d3;border-radius:40px;padding:8px 12px;font-size:12px;font-weight:600}.activeFilters button:hover{background:#dce7da}.activeFilters span{font-size:17px}.activeFilters .clear{background:none;border:0;color:#b96e4d;text-decoration:underline}.loading{display:grid;place-items:center;padding:30px}.empty{text-align:center;padding:62px 25px;background:#eef2ea;border-radius:18px;color:#6e8172}.empty span{font-size:50px}.empty h3{font-family:var(--serif);color:#234b3c;font-size:30px;font-weight:400;margin:12px 0}.empty p{margin-bottom:22px}.more{display:flex;justify-content:center;padding-top:16px}
 @media(max-width:1130px){.layout{grid-template-columns:260px minmax(0,1fr);gap:22px}.filters{padding:20px}.page{width:calc(100% - 44px)}}@media(max-width:930px){.layout{display:block}.filters{position:static;padding:0;background:none;border:0;margin-bottom:24px}.filtersToggle{width:100%;display:flex;justify-content:space-between;align-items:center;padding:19px 22px;background:#e9eee7;border:1px solid #dbe3d7;border-radius:12px;color:#2c4c40;font-weight:700}.filtersToggle span{font-size:22px}.filterContent{display:none;padding:23px;background:#f0f2ed;border-radius:12px;margin-top:10px}.open{display:block}.heading>span{display:none}}@media(max-width:640px){.page{width:calc(100% - 36px);padding:46px 0}.heading{padding-bottom:35px}.heading h1{font-size:clamp(46px,10vw,64px)}.heading>div>p:last-child{font-size:14px}.toolbar{align-items:flex-start;flex-direction:column;gap:17px}.toolbar h2{font-size:27px}.sort{flex-direction:row;align-items:center;gap:12px}.sort select{max-width:none}.activeFilters{gap:7px}}
+
+/* Editorial title remains a single, balanced line on desktop. */
+@media(min-width:931px){
+ .heading{padding-bottom:44px;gap:12px;align-items:end}
+ .heading>div{flex:1;min-width:0;max-width:none}
+ .heading h1{
+  font-size:clamp(40px,4.65vw,66px);
+  line-height:1.08;
+  white-space:nowrap;
+  margin:15px 0 16px;
+  letter-spacing:-.042em;
+ }
+ .heading>span{display:none}
+ .heading>div>p:last-child{max-width:750px;font-size:14px;line-height:1.65}
+}
+@media(min-width:931px) and (max-width:1100px){
+ .heading h1{font-size:clamp(37px,4.55vw,51px)}
+}
+@media(max-width:930px){
+ .heading h1{white-space:normal;font-size:clamp(43px,6.2vw,65px);overflow-wrap:normal}
+}
