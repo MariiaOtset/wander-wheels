@@ -60,3 +60,10 @@ Designed and developed by [Mariia Otset](https://github.com/MariiaOtset).
 - Run `npm test` for coverage checks, plus `npm run build` and `npm run lint`.
 
 **Image and data provenance:** the first 13 names and vehicle specs are based on the original GoIT Travel Trucks exercise sample records. Photo URLs point to the GoIT camper image archive, with a fallback image for network failures. All descriptions, prices, reviews and new curated listings are illustrative examples, not claims about actual vehicles or ratings.
+
+## November UI refinements
+
+- Five varied **example guest impressions per camper** replace the repetitive placeholder feedback. They are sample copy, not verified customer testimonials.
+- Cards show five key amenity chips and a `+N more` indicator; the detail view still shows every feature. The layout keeps action buttons clear of feature chips on mobile and laptop widths.
+- On desktops, the sticky filter sidebar has its own capped-height scroll area with accessible controls all the way through `Show campers`.
+- Applying filters closes the mobile accordion and scrolls the viewport to the top of the camper results, respecting reduced-motion settings.
