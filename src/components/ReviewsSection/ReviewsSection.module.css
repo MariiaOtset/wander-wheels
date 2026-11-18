@@ -8,3 +8,10 @@
 .reviewItem{min-width:0;padding:18px 20px;background:#f3f5f1;border:1px solid #e2eadd;border-radius:13px;overflow-wrap:anywhere}
 .note{font-size:10px;line-height:1.6;color:#97a499;margin-top:17px}
 @media(max-width:600px){.reviewItem{padding:15px}.heading{align-items:start}.heading h3{font-size:27px}}
+
+
+.heading h3{font-family:var(--display);font-weight:800;color:#183b50;font-size:clamp(33px,3.3vw,43px)}
+.heading h3 em{color:#ec804d}
+.counter{color:#6a8b9a}
+.reviewItem{background:#ebf3f7;border-color:#dbe9ef;border-radius:9px}
+.note{color:#849ca9}

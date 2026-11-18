@@ -41,3 +41,9 @@
 .wrapper { width: 100%; max-width: 650px; padding: clamp(32px,7vw,80px) 20px; text-align: center; }
 .icon { width: 100px; height: 100px; }
 @media (max-width: 600px) { .wrapper { gap: 12px; } .text { font-size: 15px; line-height: 1.5; } }
+
+
+.wrapper{border:1px solid #d3e4ec;border-radius:12px;background:#eaf3f7}
+.icon{fill:#f47c48}
+.link{color:#246787;font-weight:800}
+.text{color:#4e7082}

@@ -1,1 +1,7 @@
 .button{display:grid;place-items:center;border:1px solid #dce5dd;background:#f6f8f3;border-radius:50%;width:37px;height:37px;padding:8px;flex:none;transition:background .2s,transform .2s}.button:hover{background:#e8eee4;transform:scale(1.06)}.heart{width:19px;height:19px;stroke:#385548;fill:none}.favorite{fill:#bd6d4e;stroke:#bd6d4e}
+
+
+.button{background:#eef5f9;border-color:#d7e5ec;border-radius:9px}
+.button:hover{background:#dceef6}
+.heart{stroke:#37647a}
+.favorite{fill:#f47c48;stroke:#f47c48}

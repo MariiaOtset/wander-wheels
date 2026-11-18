@@ -50,3 +50,29 @@
  .heading>div>p:last-child{max-width:none}
  .heading h1{font-size:clamp(39px,4.5vw,62px)}
 }
+
+
+.page{color:#1b3648}
+.heading h1{font-family:var(--display);font-weight:800;letter-spacing:-.014em;text-transform:uppercase;color:#18384c}
+.heading h1 em{color:#eb7949;font-style:normal;font-weight:800}
+.heading>div>p:last-child{color:#718695}
+.heading>span{color:#778c99}
+.filters{background:#eaf2f6;border-color:#d6e3eb;border-radius:13px}
+.filterIntro{border-bottom-color:#d1e0e9}
+.filterIntro h2{font-family:var(--display);font-weight:800;font-size:34px;color:#18394c}
+.filterIntro p{color:#6d8695}
+.toolbar{border-bottom-color:#d9e5ec}
+.counter{color:#dc6d3e}
+.toolbar h2{font-family:var(--display);font-weight:800;font-size:35px;color:#19394d}
+.sort{color:#6f8596}
+.sort select{border-color:#cadce6;color:#1b4255;border-radius:8px}
+.activeFilters button{background:#e1f0f6;border-color:#c5e0ed;color:#245b72}
+.activeFilters button:hover{background:#d0e7f0}
+.activeFilters .clear{color:#db6c3d}
+.empty{background:#e7f1f6;border-radius:12px;color:#708798}
+.empty h3{font-family:var(--display);font-weight:800;color:#153b52;font-size:37px}
+@media(max-width:930px){
+ .filters{background:transparent}
+ .filtersToggle{background:#dfeef5;border-color:#c8dfe9;color:#19425a;border-radius:9px}
+ .filterContent{background:#eaf2f6;border-radius:10px}
+}

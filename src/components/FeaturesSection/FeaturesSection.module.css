@@ -1,1 +1,6 @@
 .sectionWrapper{padding:26px;background:#eef2eb;border-radius:13px;display:flex;flex-direction:column;gap:24px}.vehicleDetails{border-top:1px solid #d1dfd1;padding-top:20px}.titleUnderline{font-family:var(--serif);color:#23483b;font-size:25px;font-weight:400;margin:0 0 18px}@media(max-width:600px){.sectionWrapper{padding:17px}}
+
+
+.sectionWrapper{background:#ebf3f7;border-radius:10px}
+.vehicleDetails{border-top-color:#d0e2eb}
+.titleUnderline{font-family:var(--display);font-size:29px;font-weight:800;color:#1a4359}

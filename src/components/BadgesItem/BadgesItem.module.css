@@ -3,3 +3,7 @@
 .wrap{display:flex;align-items:center;gap:6px;min-width:0;font-size:11px;font-weight:700;line-height:1.2;white-space:nowrap}
 .badgeIcon{width:17px;height:17px;flex:none;color:#5f826b}
 @media(max-width:430px){.itemWrapper{padding:6px 8px}.wrap{font-size:10px;gap:5px}.badgeIcon{width:15px;height:15px}}
+
+
+.itemWrapper{background:#eaf2f6;border-color:#d9e7ed;border-radius:7px;color:#395f74}
+.badgeIcon{color:#397690}

@@ -29,3 +29,49 @@
  .closing h2{font-size:clamp(39px,9vw,59px)}
  .storyText h2{font-size:clamp(42px,9vw,64px)}
 }
+
+
+/* Travel magazine -> modern road-club editorial. */
+.intro{background:#f6f8fa;padding-block:95px 88px}
+.sectionHead h2,.featuredHead h2,.stepsHeader h2{color:#19384d;font-weight:800;letter-spacing:-.012em}
+.sectionHead h2 em,.featuredHead h2 em,.stepsHeader h2 em,.closing h2 em,.escapeHead h2 em{color:#f0804d;font-style:normal}
+.sectionHead>p{color:#667e8e}
+.value{background:#eef3f7;border-color:#dbe5ec;border-top:3px solid #ff8751;border-radius:11px;min-height:220px}
+.value:nth-child(2){background:#e9f2f6;border-top-color:#55a2bb}
+.value:nth-child(3){background:#f7eee7;border-top-color:#eea65a}
+.valueTop{color:#6e8797}
+.valueIcon{color:#e37743}
+.value h3{font-family:var(--display);font-size:34px;font-weight:700;line-height:1.04;color:#19384d}
+.value p{color:#677d8b}
+.featured{background:#fff;padding-block:76px 90px}
+.featuredHead>a{border-bottom-color:#f0804d}
+.featuredHead>a span{color:#f0804d}
+.featuredImage{border-radius:10px;background:#dce7ed}
+.featuredImage span{background:#17384ded;color:#fff;border-radius:7px;font-size:9px;letter-spacing:.08em}
+.featuredCaption{color:#19384d}
+.featuredCaption strong{font-weight:800}
+.featuredCaption p{color:#73899a}
+.featuredCaption small{color:#8398a6}
+.featuredFallback{background:#eaf2f6;color:#5d7685}
+.featuredFallback a{color:#2f7694}
+.story{background:#112c3e}
+.storyText .ww-eyebrow{color:#ffa76d}
+.storyText h2{font-family:var(--display);font-weight:800;letter-spacing:-.015em;text-transform:uppercase}
+.storyText h2 em{color:#ff9566;font-style:normal}
+.storyText p{color:#c5dce5}
+.steps{background:#f0f5f8;padding-block:85px}
+.step{border-top-color:#b8cbd6}
+.step>span{color:#dc7446}
+.step h3{font-family:var(--display);font-weight:700;font-size:38px;color:#193b50;margin-top:27px}
+.step p{color:#637e8d}
+.closing{background:#e3eff5;padding-block:66px 80px}
+.closing h2{color:#16394d;font-weight:800;letter-spacing:-.015em;text-transform:uppercase}
+.escapeSection{background:#f6f8fa;padding-block:85px 95px}
+.escapeHead h2{color:#19384d;font-weight:800}
+.escapeHead>p{color:#697e8d}
+.escapeCard{border-radius:11px;min-height:270px}
+.escapeCard h3{font-family:var(--display);font-weight:800;letter-spacing:-.01em;line-height:1}
+.light{background:linear-gradient(145deg,#dbeaf2,#bcd6e4);color:#12394f}
+.warm{background:linear-gradient(145deg,#ffe5c5,#f7bb8d);color:#5e3427}
+.deep{background:linear-gradient(145deg,#326783,#132c42);color:#fff}
+@media(max-width:730px){.intro{padding-top:100px}.escapeSection{padding-block:62px}.closing h2{font-size:clamp(42px,9vw,63px)}}

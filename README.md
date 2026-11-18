@@ -67,3 +67,13 @@ Designed and developed by [Mariia Otset](https://github.com/MariiaOtset).
 - Cards show five key amenity chips and a `+N more` indicator; the detail view still shows every feature. The layout keeps action buttons clear of feature chips on mobile and laptop widths.
 - On desktops, the sticky filter sidebar has its own capped-height scroll area with accessible controls all the way through `Show campers`.
 - Applying filters closes the mobile accordion and scrolls the viewport to the top of the camper results, respecting reduced-motion settings.
+
+## Distinct visual identity — road-club edition
+
+Wander Wheels is intentionally visually differentiated from the Photo Explorer portfolio project:
+- **Wander Wheels** uses a bold outdoor/adventure aesthetic with Barlow Condensed display type, Plus Jakarta Sans body type, an original route-line symbol, crisp angular UI controls, deep midnight blue and energising sunset-orange accents.
+- The route-line mark is used in the navigation and footer, with a dedicated SVG favicon. The old starburst logo, soft botanical-green palette and editorial italic-serif headings have been retired.
+- The change runs through the homepage, catalog, filters, favourites, vehicle details, comparison, amenities, booking-demo form and reviews.
+- Vehicle data, comparisons, favourites, filters, reservation price estimates and navigation behave exactly as before. No new API or paid service is required.
+
+Design tokens are defined in `src/index.css`, and component-specific responsive styles live with their components.

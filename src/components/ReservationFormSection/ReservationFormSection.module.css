@@ -1,1 +1,7 @@
 .sectionWrapper{width:100%;min-width:0;padding:28px;border:1px solid #dce4d9;background:#fff;border-radius:16px;align-self:start;box-shadow:0 10px 40px #23412b0b}.eyebrow{font-size:10px;letter-spacing:.16em;color:#b27555;font-weight:800;margin-bottom:12px}.title{font-family:var(--serif);font-size:35px;font-weight:400;color:#234638}.text{font-size:13px;color:#829285;line-height:1.7;margin:9px 0 23px}@media(max-width:600px){.sectionWrapper{padding:21px}}
+
+
+.sectionWrapper{border-color:#d9e5ec;border-radius:12px;box-shadow:0 10px 35px #18384d0c}
+.eyebrow{color:#d66e44}
+.title{font-family:var(--display);font-size:39px;font-weight:800;color:#163b53}
+.text{color:#7890a0}

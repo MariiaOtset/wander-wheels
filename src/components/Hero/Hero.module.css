@@ -10,3 +10,39 @@
 }
 @media(max-width:1179px){.content h1{white-space:normal;text-wrap:pretty}}
 @media(max-width:730px){.content h1{font-size:clamp(51px,10vw,79px)}}
+
+
+/* Bold expedition-style hero; no serif italics or botanical palette. */
+.hero{background:#142e40}
+.backdrop{background:linear-gradient(90deg,rgba(9,29,43,.95) 0%,rgba(9,29,43,.76) 38%,rgba(9,29,43,.13) 85%),linear-gradient(0deg,#102b3c9e,transparent 50%),url("../../images/home-page/hero.jpg") center/cover no-repeat}
+.content{max-width:1050px}
+.kicker{color:#e2eff4;letter-spacing:.2em;font-size:10px;font-weight:800}
+.kicker span{display:grid;place-items:center;width:26px;height:26px;border-radius:6px;color:#172f42;background:#ff8751;font-size:19px}
+.content h1{font-family:var(--display);font-weight:800;font-size:clamp(76px,8.2vw,124px);letter-spacing:-.017em;line-height:.91;text-transform:uppercase;text-wrap:balance;white-space:normal}
+.content h1 em{color:#ff985c;font-style:normal;font-weight:800}
+.description{max-width:590px;color:#deebf1;font-size:16px;line-height:1.75}
+.button{background:#ff8751;color:#1c2e3a;border-radius:10px;font-size:12px;font-weight:800;padding:16px 20px;gap:30px}
+.button:hover{background:#ffad7c}
+.secondary{border-bottom-color:#a9c4d0}
+.searchDock{max-width:1040px;background:#fbfcfd;color:#163344;border:1px solid #edf1f4;border-left:4px solid #ff8751;border-radius:12px;box-shadow:0 22px 55px #0c23355e}
+.dockKicker,.field>span{color:#cb6540;font-size:9px}
+.searchIntro strong{font-family:var(--display);font-size:30px;font-weight:700;letter-spacing:.01em}
+.field{border-left-color:#dbe6ed}
+.field input{color:#183a4a}
+.field input::placeholder{color:#8b9ca7}
+.submit{background:#17384d;color:#fff;border-radius:8px;font-size:11px}
+.submit:hover{background:#28607b}
+.submit span{color:#ffae82}
+.imageCredit{color:#e4ecf0a6}
+@media(min-width:1180px){
+ .content{max-width:min(100%,1100px)}
+ .content h1{font-size:clamp(80px,7vw,116px);line-height:.94;white-space:normal}
+ .description{font-size:16px;max-width:680px}
+}
+@media(max-width:730px){
+ .hero{background:#142e40}
+ .content h1{font-size:clamp(62px,11vw,90px);line-height:.91}
+ .searchDock{border-left:3px solid #ff8751}
+ .field{border-left:0;border-top:1px solid #dbe6ed}
+}
+@media(max-width:430px){.content h1{font-size:clamp(58px,12vw,72px)}.description{font-size:14px}}
