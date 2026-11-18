@@ -1,1 +1,14 @@
 .page{width:min(100% - 64px,1260px);min-height:60vh;margin:auto;padding:74px 0 80px}.heading{max-width:800px;margin-bottom:48px}.heading h1{font-size:clamp(46px,5.5vw,78px);line-height:1.1;color:#1d4038;margin:15px 0}.heading h1 em{color:#af785a}.heading>p:last-child{color:#6b7c70;line-height:1.8;font-size:16px;max-width:580px}.count{font-size:11px;font-weight:800;color:#a96d54;letter-spacing:.16em;margin-bottom:19px}.list{display:grid;gap:20px;max-width:1020px}.item{display:flex;gap:22px;padding:20px;border:1px solid #e0e6dd;background:#fff;border-radius:18px}.empty{display:flex;flex-direction:column;align-items:flex-start;padding:55px;background:#e9eee7;border-radius:20px;max-width:740px}.empty>span{font-size:52px;color:#b87b5d}.empty h2{font-family:var(--serif);font-weight:400;color:#214439;font-size:38px;margin:14px 0}.empty p{line-height:1.65;color:#6f8173;margin-bottom:27px}@media(max-width:700px){.page{width:calc(100% - 36px);padding:45px 0}.heading{margin-bottom:35px}.item{flex-direction:column;padding:13px}.empty{padding:30px 22px}.empty h2{font-size:31px}}
+
+/* Full-width headings should not wrap inside an artificial 800px column. */
+.heading{max-width:none;margin-bottom:clamp(24px,3vw,36px)}
+.heading h1{font-size:clamp(39px,4.4vw,65px);line-height:1.08;letter-spacing:-.045em;margin:12px 0}
+.heading>p:last-child{max-width:none;font-size:clamp(13px,1.12vw,15px);line-height:1.6}
+.empty{width:100%;max-width:none;padding:clamp(25px,4vw,44px)}
+.empty h2{font-size:clamp(30px,3.1vw,39px)}
+@media(min-width:1100px){
+ .heading h1{white-space:nowrap}
+ .heading>p:last-child{white-space:nowrap}
+ .empty p{max-width:none}
+}
+@media(max-width:700px){.heading h1{white-space:normal;font-size:clamp(38px,8vw,54px)}.heading>p:last-child{white-space:normal}.empty{padding:28px 22px}}

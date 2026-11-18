@@ -9,7 +9,7 @@ export default function Hero(){
    <div className={css.backdrop} aria-hidden="true"/>
    <div className={css.content}>
       <p className={css.kicker}><span aria-hidden="true">✳</span> CURATED CAMPERVAN ESCAPES</p>
-      <h1 id="hero-title">The journey<br/>is <em>everything.</em></h1>
+      <h1 id="hero-title">The journey is <em>everything.</em></h1>
       <p className={css.description}>Take the scenic route. Discover beautiful campers made for the moments that matter, wherever the road leads.</p>
       <div className={css.actions}><NavLink className={css.button} to="/catalog">Explore our campers <span aria-hidden="true">↗</span></NavLink><a href="#how-it-works" className={css.secondary}>How it works <span aria-hidden="true">↓</span></a></div>
    </div>
