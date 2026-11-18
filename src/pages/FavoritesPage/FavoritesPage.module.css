@@ -12,3 +12,15 @@
  .empty p{max-width:none}
 }
 @media(max-width:700px){.heading h1{white-space:normal;font-size:clamp(38px,8vw,54px)}.heading>p:last-child{white-space:normal}.empty{padding:28px 22px}}
+
+
+.page{color:#18384c}
+.heading h1{font-family:var(--display);font-weight:800;letter-spacing:-.01em;text-transform:uppercase;line-height:1.03;color:#16394d}
+.heading h1 em{color:#f0804d;font-style:normal;font-weight:800}
+.heading>p:last-child{color:#728999}
+.count{color:#d66e45}
+.empty{background:#e5f0f6;border:1px solid #d2e3ec;border-radius:13px}
+.empty>span{color:#ed8655}
+.empty h2{font-family:var(--display);font-weight:800;letter-spacing:.01em;text-transform:uppercase;color:#173f55;font-size:clamp(35px,3.4vw,47px)}
+.empty p{color:#698293}
+.item{border-color:#d6e4ec;border-radius:12px}

@@ -5,3 +5,7 @@
 .camperItem:hover{box-shadow:0 15px 32px #203d2b1c}
 @media(max-width:1040px){.camperItem{gap:15px;padding:12px}}
 @media(max-width:700px){.camperItem{flex-direction:column;gap:0;padding:11px}}
+
+
+.camperItem{border-radius:12px;border-color:#d9e6ed;box-shadow:0 8px 24px #18394b0c}
+.camperItem:hover{box-shadow:0 13px 30px #163d5522}

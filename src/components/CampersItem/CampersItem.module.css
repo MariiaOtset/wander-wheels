@@ -35,3 +35,15 @@
  .details{justify-content:space-between}
 }
 @media(prefers-reduced-motion:reduce){.image{transition:none}.imageLink:hover .image{transform:none}}
+
+
+.imageLink{border-radius:9px;background:#dbe8ed}
+.photoCount{background:#f8fcffee;color:#1d495e;border-radius:6px}
+.description{color:#718898}
+.compare,.details{border-radius:9px;font-weight:800}
+.compare{background:#e6f2f7;border-color:#cee5ee;color:#275a72}
+.compare:hover{background:#d8ecf4}
+.compare[aria-pressed=true]{background:#d5eafa;border-color:#87bfd2;color:#1a4c67}
+.details{background:#19394d;border-color:#19394d;color:#fff}
+.details:hover{background:#2d627c}
+.details span{color:#ff995f}

@@ -10,3 +10,16 @@
  .submit{margin-top:20px}
 }
 @media(max-width:930px){.option{min-height:44px}}
+
+
+.locationLabel{color:#50778b}
+.location{border-color:#ccdde6;border-radius:8px;color:#1f4256}
+.location::placeholder{color:#8ca1ad}
+.divider{background:#d2e0e9}
+.sectionTitle{color:#1a4156;font-family:var(--display);font-size:21px;font-weight:800;letter-spacing:.01em}
+.option{background:#fff;border-color:#d6e3ea;border-radius:7px;color:#526c7b;font-weight:700}
+.option:has(input:checked){border-color:#6dabc3;background:#d5ecf6;color:#194f6a}
+.option input{accent-color:#2c7493}
+.submit{background:#f47c48;color:#172b3a;border-radius:8px}
+.submit:hover{background:#ff9a67}
+.reset{color:#607e90}
