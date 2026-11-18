@@ -3,6 +3,7 @@ import {NavLink,useLocation} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {selectFavorites} from "../../redux/favorites/selectors.js";
 import css from "./Header.module.css";
+import BrandMark from "../BrandMark/BrandMark.jsx";
 
 export default function Header(){
   const [menuOpen,setMenuOpen]=useState(false);
@@ -13,7 +14,7 @@ export default function Header(){
   return <header className={css.header}>
     <div className={css.inner}>
       <NavLink className={css.brand} to="/" aria-label="Wander Wheels home">
-        <span className={css.brandSymbol} aria-hidden="true">✳</span>
+        <span className={css.brandSymbol} aria-hidden="true"><BrandMark/></span>
         <span>WANDER<span className={css.brandLight}>WHEELS</span><small>THE OPEN ROAD CLUB</small></span>
       </NavLink>
       <nav id="primary-navigation" aria-label="Main navigation" className={css.nav+(menuOpen?" "+css.open:"")}>
