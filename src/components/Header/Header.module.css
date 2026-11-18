@@ -1,3 +1,29 @@
 .header{position:sticky;top:0;z-index:50;background:rgba(252,251,248,.96);border-bottom:1px solid #e2e5de;backdrop-filter:blur(18px)}.inner{width:min(100% - 72px,1360px);margin:auto;min-height:84px;display:flex;align-items:center;gap:36px}.brand{display:flex;align-items:center;gap:10px;flex-shrink:0;color:var(--forest);font-size:19px;letter-spacing:-.075em;line-height:1;font-weight:800}.brandSymbol{display:grid;place-items:center;width:37px;height:37px;border:1px solid #bdc9bb;border-radius:50%;color:var(--orange);font-size:23px;letter-spacing:0}.brandLight{font-weight:500}.brand small{display:block;letter-spacing:.21em;font-weight:700;color:#8b9a8b;font-size:7px;margin-top:6px}.nav{display:flex;align-items:center;gap:28px;margin:auto}.navLink{display:flex;align-items:center;gap:6px;min-height:44px;color:#52645d;font-weight:600;font-size:13px;transition:color .2s}.navLink:hover,.activeLink{color:#a85d41}.count{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#e8eee6;color:#486151;font-size:10px}.actions{display:flex;align-items:center;margin-left:auto}.cta{display:flex;align-items:center;gap:24px;border-radius:30px;background:var(--forest);color:#fff;font-size:12px;font-weight:700;padding:14px 19px;white-space:nowrap;transition:background .2s}.cta:hover{background:#286253}.cta span{font-size:18px}.menuButton,.mobileAction{display:none}
 @media(max-width:860px){.inner{width:min(100% - 36px,1360px);min-height:72px}.nav{gap:16px}.navLink{font-size:12px}.cta{display:none}}
 @media(max-width:620px){.inner{min-height:70px}.brand{font-size:18px}.menuButton{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;border:1px solid #d5ddd2;background:#fff;border-radius:50%;width:43px;height:43px}.menuButton span{width:18px;height:2px;background:var(--forest);border-radius:4px}.nav{display:none;position:absolute;left:0;right:0;top:100%;background:#faf9f6;padding:16px 22px 22px;box-shadow:0 15px 30px #133c2820;border-top:1px solid var(--line);margin:0;align-items:stretch;flex-direction:column;gap:3px}.open{display:flex}.navLink{min-height:48px;padding:0 10px;font-size:15px}.mobileAction{display:flex;align-items:center;justify-content:space-between;background:var(--forest);color:#fff;font-weight:700;border-radius:11px;padding:14px 16px;margin-top:10px}}
+
+
+/* The road-club identity: angular route mark, condensed wordmark, cool surfaces. */
+.header{background:rgba(250,252,253,.96);border-top:3px solid #ff8751;border-bottom:1px solid #dfe7ec}
+.inner{min-height:77px}
+.brand{font-family:var(--display);font-size:27px;font-weight:800;letter-spacing:.01em;line-height:.9;color:#17384d}
+.brandSymbol{width:40px;height:40px;flex:none;border:0;border-radius:10px;background:#ff8751;color:#122b3c;transform:rotate(-4deg)}
+.brandSymbol svg{width:27px;height:27px;transform:rotate(4deg)}
+.brandLight{font-weight:800;color:#e37444}
+.brand small{font-family:"Plus Jakarta Sans",sans-serif;font-size:8px;letter-spacing:.15em;color:#6d8492;margin-top:8px}
+.navLink{color:#526b7b;font-size:12px;font-weight:700}
+.navLink:hover,.activeLink{color:#e26737}
+.count{background:#dcecf3;color:#24566a}
+.cta{border-radius:10px;background:#17384d;color:#fff;font-size:11px;letter-spacing:.015em;padding:14px 18px}
+.cta:hover{background:#295975}
+.cta span{color:#ffac78}
+@media(max-width:620px){
+ .inner{min-height:66px}
+ .brand{font-size:24px}
+ .brandSymbol{width:36px;height:36px}
+ .brandSymbol svg{width:24px;height:24px}
+ .menuButton{border-radius:10px;border-color:#cadce6;background:#fff}
+ .menuButton span{background:#183b50}
+ .nav{background:#f7fafc;box-shadow:0 15px 30px #18384b20}
+ .mobileAction{border-radius:9px;background:#17384d}
+}
