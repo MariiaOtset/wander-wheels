@@ -5,3 +5,10 @@
 @media(max-width:1180px) and (min-width:701px){.wrapper{flex-wrap:wrap;gap:5px}.priceWrapper{width:100%;justify-content:space-between}}
 @media(max-width:700px){.wrapper{flex-wrap:wrap;gap:9px}.priceWrapper{width:auto;margin-left:auto}}
 @media(max-width:460px){.wrapper{align-items:flex-start}.priceWrapper{width:100%;margin-left:0}}
+
+
+.title{font-family:var(--display);font-size:clamp(26px,2.8vw,33px);font-weight:800;letter-spacing:.005em;color:#163a50}
+.subtitle{color:#899caa}
+.priceWrapper{color:#183b50}
+.priceWrapper strong{font-size:19px}
+.priceWrapper span{color:#7e96a2}

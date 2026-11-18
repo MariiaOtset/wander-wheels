@@ -1,1 +1,20 @@
 .form{display:flex;flex-direction:column;gap:17px}.demo{background:#edf1e9;color:#577b60;border-radius:8px;padding:12px;font-size:10px;letter-spacing:.08em;font-weight:800;display:flex;justify-content:space-between;gap:7px;flex-wrap:wrap}.demo span{color:#a6775e}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.form label{display:flex;flex-direction:column;gap:7px;color:#345648;font-size:12px;font-weight:700}.form input,.form textarea{width:100%;min-width:0;border:1px solid #dce5dc;background:#fff;border-radius:9px;padding:13px 11px;color:#264638;min-height:46px;font-size:13px}.form input::placeholder,.form textarea::placeholder{color:#a3ada2}.form small{color:#b0443d;font-size:11px;line-height:1.4}.form textarea{resize:vertical;min-height:84px}.summary{padding:17px;background:#f1f4ee;border-radius:10px}.summary>div{display:flex;justify-content:space-between;gap:8px;align-items:center;color:#526c5b;font-size:13px}.summary strong{color:#214e39;font-size:17px}.summary p{color:#89988a;font-size:11px;line-height:1.5;margin-top:8px}.submit{display:flex;align-items:center;justify-content:space-between;background:#b86c4c;color:white;border:0;border-radius:9px;padding:16px 18px;font-size:13px;font-weight:800}.submit:hover{background:#9e573c}.submit:disabled{opacity:.6;cursor:not-allowed}.submit span{font-size:19px}.disclaimer{color:#97a496;font-size:11px;line-height:1.6}.confirmation{padding:19px;border-radius:12px;background:#edf3e9;color:#345442}.confirmation>span{display:grid;place-items:center;background:#d5e6d6;color:#396a45;width:45px;height:45px;border-radius:50%;font-size:25px;margin-bottom:17px}.confirmation h4{font-family:var(--serif);font-size:27px;font-weight:400;margin-bottom:9px}.confirmation p{font-size:13px;line-height:1.65;margin-bottom:18px}.confirmation>div{border-top:1px solid #c9ddc9;border-bottom:1px solid #c9ddc9;padding:17px 0;line-height:1.8;font-size:13px}.confirmation button{border:0;border-bottom:1px solid #40614f;color:#315a47;background:none;padding:10px 0;margin-top:12px;font-weight:800;font-size:12px}@media(max-width:560px){.fields{grid-template-columns:1fr}}
+
+
+.demo{background:#eaf3f8;color:#3d6c83;border-radius:7px}
+.demo span{color:#db7448}
+.form label{color:#274e63}
+.form input,.form textarea{border-color:#d5e4ec;color:#1f4559;border-radius:7px}
+.form input::placeholder,.form textarea::placeholder{color:#98a9b4}
+.summary{background:#eaf3f8;border-radius:8px}
+.summary>div{color:#557183}
+.summary strong{color:#1b475f}
+.summary p{color:#839ca9}
+.submit{background:#f47c48;color:#182f40;border-radius:8px}
+.submit:hover{background:#ff9865}
+.disclaimer{color:#8094a3}
+.confirmation{background:#e5f2f8;color:#264d61}
+.confirmation>span{background:#cdeaf2;color:#2d718b;border-radius:9px}
+.confirmation h4{font-family:var(--display);font-weight:800;font-size:32px}
+.confirmation>div{border-color:#cee1ea}
+.confirmation button{border-bottom-color:#38758d;color:#245a70}
